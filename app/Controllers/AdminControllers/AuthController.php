@@ -119,4 +119,14 @@ class AuthController extends BaseController
 
         return view('admin/register');
     }
+
+    public function logout(){
+        // Destroy the session
+        session()->destroy();
+        // Optionally, you can also set a flashdata message
+        session()->setFlashdata('success', 'You have successfully logged out.');
+        // Redirect to the login page or any other page
+        return redirect()->to('/admin/login');
+    }
+    
 }

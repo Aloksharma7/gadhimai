@@ -21,6 +21,7 @@ $routes->get('/', 'Home::index');
 // Protect the `/admin` route with the `auth` filter to ensure the user is logged in
 $routes->group('admin', ['filter' => 'auth', 'namespace' => 'App\Controllers\AdminControllers'], static function ($routes) {
     $routes->get('/', 'AuthController::index'); // Dashboard or admin homepage
+    $routes->get('logout', 'AuthController::logout'); // logout
 });
 
 // Define routes that should be accessed only by guests (non-logged-in users)
