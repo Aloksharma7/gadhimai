@@ -54,7 +54,9 @@
                             <input type="text" class="form-control" id="dataNepali" name="data_nepali" placeholder="Enter data in Nepali" required>
                         </div>
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit
+                            
+                        </button>
                     </form>
                 </div>
             </div>
