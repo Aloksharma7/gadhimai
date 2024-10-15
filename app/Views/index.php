@@ -78,7 +78,55 @@
     </div>
 </div>
 
+<!-- photo gallery -->
+<section class="photo-gallery">
+            <h2>Photo Gallery</h2>
+           <!-- Gallery -->
+           <table>
+<tr>
+<td  rowspan="2" class="col-md-6">
+<img src="https://via.placeholder.com/600x400" alt="Main Photo">
+</td>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+</tr>
+<tr>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+</tr>
 
+</table>
+
+<table>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+</table>
+<table>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+<td class="col-md-3">>
+<img src="https://via.placeholder.com/300x200" alt="Smaller Photo 1">
+</td>
+
+</table>
+
+          
+<!-- Gallery -->
+            <a href="#" class="view-more">View More</a>
+        
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
 

@@ -141,3 +141,89 @@ hr{
     transition: .1s ease-in-out;
     fill: black; /* Change SVG color on hover */
 }
+
+/* photo gallaery */
+
+.photo-gallery {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-gallery h2 {
+    color: #9a031e;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+}
+
+.photo-gallery h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #9a031e;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.photo-gallery .row {
+    gap: 10px; /* Adjust the gap for better spacing between images */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.view-more {
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #9a031e;
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more:hover {
+    background-color: #fb8b24;
+    color: #fff;
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+    .photo-gallery img {
+        width: 100%; /* Ensure images take full width on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-gallery h2 {
+        font-size: 28px;
+    }
+    .view-more {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
