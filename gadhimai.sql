@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 15, 2024 at 03:17 PM
+-- Generation Time: Oct 16, 2024 at 08:58 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `gadhimai`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `posts`
+--
+
+CREATE TABLE `posts` (
+  `id` int NOT NULL,
+  `post_title` varchar(255) NOT NULL,
+  `post_content` text NOT NULL,
+  `category` varchar(100) DEFAULT NULL,
+  `author_id` int DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `status` enum('published','draft') DEFAULT 'draft',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`id`, `post_title`, `post_content`, `category`, `author_id`, `slug`, `status`, `created_at`, `updated_at`) VALUES
+(2, 'moern', 'morem\r\n', 'new', NULL, 'moern', 'draft', '2024-10-16 06:41:32', '2024-10-16 08:56:18'),
+(3, 'Lorem', 'dsvsd', 'dsf', NULL, 'lorem', 'draft', '2024-10-16 06:43:02', '2024-10-16 06:43:02'),
+(4, 'Hello World', 'hello world', 'new', NULL, 'hello-world', 'published', '2024-10-16 06:49:35', '2024-10-16 06:49:35'),
+(5, 'Hello World 2', 'hello world2', 'new2', NULL, 'hello-world-2', 'published', '2024-10-16 06:50:20', '2024-10-16 06:50:20');
 
 -- --------------------------------------------------------
 
@@ -51,6 +79,12 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `created_at`, `
 --
 
 --
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -59,6 +93,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
