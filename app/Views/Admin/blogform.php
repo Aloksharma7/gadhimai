@@ -1,7 +1,10 @@
 <?= $this->extend('templates/layout') ?>
 <?= $this->section('content') ?>
 
+
+
 <div class="container mt-5">
+    
     <h3>Create a New Blog Post</h3>
     <form action="/admin/posts/create" method="post" enctype="multipart/form-data">
         <!-- Title -->

@@ -4,7 +4,7 @@
 <div class="container mt-5">
     <h3>Create a New Post</h3>
 
-    <form action="/blog/store" method="post">
+    <form action="/admin/blog/store" method="post">
         <div class="mb-3">
             <label for="post_title" class="form-label">Title</label>
             <input type="text" class="form-control" id="post_title" name="post_title" required>

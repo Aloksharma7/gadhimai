@@ -3,8 +3,9 @@
 
 <div class="container mt-5">
     <h3>Blog Posts</h3>
-    <a href="/blog/create" class="btn btn-primary">Create New Post</a>
-
+    <button class="btn">
+    <a href="/admin/blog/create" class="btn btn-primary">Create New Post</a>
+    </button>
     <table class="table mt-4">
         <thead>
             <tr>
@@ -21,8 +22,8 @@
                     <td><?= $post['category']; ?></td>
                     <td><?= $post['status']; ?></td>
                     <td>
-                        <a href="/blog/edit/<?= $post['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
-                        <form action="/blog/delete/<?= $post['id']; ?>" method="post" style="display:inline-block;">
+                        <a href="/admin/blog/edit/<?= $post['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
+                        <form action="/admin/blog/delete/<?= $post['id']; ?>" method="post" style="display:inline-block;">
                             <input type="hidden" name="_method" value="DELETE">
                             <button class="btn btn-sm btn-danger" type="submit">Delete</button>
                         </form>

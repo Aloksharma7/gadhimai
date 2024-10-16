@@ -47,7 +47,7 @@ class BlogController extends Controller
             'status' => $this->request->getPost('status'),
         ]);
 
-        return redirect()->to('/blog');  // Redirect to the blog index
+        return redirect()->to('admin/blog');  // Redirect to the blog index
     }
 
     public function edit($id)
@@ -88,7 +88,7 @@ class BlogController extends Controller
             'status' => $this->request->getPost('status'),
         ]);
 
-        return redirect()->to('/blog');
+        return redirect()->to('admin/blog');
     }
 
     public function delete($id)
@@ -96,6 +96,6 @@ class BlogController extends Controller
         $postModel = new PostModel();
         $postModel->delete($id);  // Delete the post
 
-        return redirect()->to('/blog');
+        return redirect()->to('admin/blog');
     }
 }

@@ -34,7 +34,7 @@ $routes->group('admin', ['filter' => 'guest', 'namespace' => 'App\Controllers\Ad
 });
 
 
-$routes->group('blog', ['namespace' => 'App\Controllers'], function ($routes) {
+$routes->group('admin/blog', ['namespace' => 'App\Controllers', 'filter' => 'auth',], function ($routes) {
     // Route to display all blog posts
     $routes->get('/', 'BlogController::index');
     
@@ -47,7 +47,7 @@ $routes->group('blog', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->post('update/(:num)', 'BlogController::update/$1'); // Handle form submission to update the post
 
     // Route to delete a blog post
-    $routes->post('delete/(:num)', 'BlogController::delete/$1');  // Handle deletion of a post by ID
+    $routes->delete('delete/(:num)', 'BlogController::delete/$1');  // Handle deletion of a post by ID
 });
 
 
