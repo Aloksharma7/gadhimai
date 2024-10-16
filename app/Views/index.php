@@ -39,6 +39,13 @@
 
 <div class="development-project container-fluid d-flex justify-content-between my-3">
     <div class="details">
+        <div> 
+       <img src="/assets/image/left-arrow.svg" class="arrow" style="-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);" alt="">
+       <img src="/assets/image/right-arrow.svg" class="arrow" alt="">
+
+
+</div>
         <h2 class="heading">Development Projects</h2>
         <p>Some kind of text here that helps to identify the content</p>
         <button class= "btn btn-primary">View More 

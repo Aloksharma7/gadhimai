@@ -235,3 +235,15 @@ hr{
     overflow: hidden;
     transform: scale(1.05);
 } */
+
+    .arrow {
+        width: 25px; /* Adjust the size as needed */
+        height: 25px; /* Adjust the size as needed */
+        /* fill:#9a031e; Change the color as needed */
+        margin: 10px;
+        /* padding: 2px; */
+        display: inline-block; /* Ensure the arrows are inline */
+        /* border: 1px solid #9a031e; */
+        /* border-radius: 150%; */
+    }
+    
