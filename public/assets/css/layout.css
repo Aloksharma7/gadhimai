@@ -254,3 +254,34 @@ hr{
         /* border-radius: 150%; */
     }
     
+    .footer {
+        background-color: var(--dark-red);
+        
+        color: white;
+        padding: 40px 0;
+      }
+      .footer h5 {
+        color: var(--white);
+        font-weight: bold;
+      }
+      .footer a {
+        color: var(--white);
+        text-decoration: none;
+      }
+      .footer a:hover {
+        color:var(--dark-red);
+        text-decoration: underline;
+      }
+      .footer .temple-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .footer .social-icons a {
+        color: var(--white);
+        margin-right: 15px;
+        font-size: 1.2rem;
+      }
+      .footer .social-icons a:hover {
+        color: var(--dark-red);
+      }

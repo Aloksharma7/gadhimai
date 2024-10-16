@@ -92,11 +92,57 @@
     </main>
 
 
-    <footer class="py-4 bg-dark text-white mt-5">
+    <!-- <footer class="py-4 bg-dark text-white mt-5">
         <div class="container text-center">
             <p class="m-0">Copyright &copy; My Website 2024</p>
         </div>
-    </footer>
+    </footer> -->
+
+    <footer class="footer mt-5">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Temple Info Section -->
+      <div class="col-md-4">
+        <div class="temple-name">Gadhi Mai Temple</div>
+        <p><i class="fa fa-location-arrow"></i> Gadhimai, Bareyarpur, Madesh Pradesh, Nepal</p>
+        <p><i class="fa fa-envelope"></i> <a href="mailto:info@gadhimaitemple.com">info@gadhimaitemple.com</a></p>
+        <p><i class="fa fa-phone"></i> +977-123456789</p>
+      </div>
+      
+      <!-- Quick Links Section -->
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">History of Temple</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <!-- Other Section -->
+      <div class="col-md-4">
+        <h5>Other Information</h5>
+        <p>Opening Hours: 6 AM - 8 PM (Daily)</p>
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa  -youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center mt-4">
+      <p>&copy; 2024 Gadhi Mai Temple. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
     <!-- JS, Popper.js, and jQuery -->
 
