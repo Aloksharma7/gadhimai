@@ -31,13 +31,20 @@
 
 <div class="container-fluid">
 <hr>
+
 </div>
 
 <div class="container-fluid">
     <img src=" <?= base_url("/assets/image/banner.webp") ?>" alt="Banner" width="100%">
 </div>
 
+
+<Section class="devotee-services container-fluid">
+
+</Section>
+
 <div class="development-project container-fluid d-flex justify-content-between my-3">
+
     <div class="details">
     <div class="container">
         <div class="my-2"> 
