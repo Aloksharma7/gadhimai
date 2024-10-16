@@ -181,6 +181,12 @@ hr{
     transition: transform 0.3s ease, box-shadow 0.3s ease; */
     }
 
+    .photo-gallery gallery-3 tr td img {
+        height: 250px!important;
+        aspect-ratio: 1/1 !important;
+        object-fit: cover;
+    }
+
 .photo-gallery table tr td img:hover {
     transform: scale(1.05);
     transition: 1s ease /* Slight zoom-in effect on hover */

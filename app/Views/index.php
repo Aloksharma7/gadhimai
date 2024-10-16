@@ -39,7 +39,7 @@
 
 <div class="development-project container-fluid d-flex justify-content-between my-3">
     <div class="details">
-        <h2>Development Projects</h2>
+        <h2 class="heading">Development Projects</h2>
         <p>Some kind of text here that helps to identify the content</p>
         <button class= "btn btn-primary">View More 
 
@@ -107,28 +107,18 @@
 
 </table>
 
-<table>
+<table class="gallery-3">
 <td class="col-md-3">
 <img src="/assets/image/gallery/Gadhimai.webp" alt="Smaller Photo 1">
 </td>
 <td class="col-md-3">
 <img src="/assets/image/gallery/Gadhimai%20temple%20puja.webp" alt="Smaller Photo 1">
 </td>
-<td class="col-md-3">
-<img src="/assets/image/gallery/Gadhimai%20temple.webp" alt="Smaller Photo 1">
-</td>
-</table>
-<table>
 <td class="col-md-3" >
-<img style="height:14rem" src="/assets/image/gallery/Gadhimai.webp" alt="Smaller Photo 1">
+<img src="/assets/image/gallery/Gadhimaitemple.jpg" alt="Smaller Photo 1" >
 </td>
-<td class="col-md-3">
-<img style="height:14rem" src="/assets/image/gallery/statu%20of%20gadhi%20ma.webp" alt="Smaller Photo 1">
-</td>
-
 </table>
 </div>
-         
 <!-- Gallery -->
 <button class= "btn btn-primary" style="margin-top:7px;">View More <svg id="MDI_arrow-left-thin-circle-outline" data-name="MDI / arrow-left-thin-circle-outline" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
 <g id="Boundary" fill="#FFAF42" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
@@ -139,6 +129,10 @@
 </svg>
 </button>        
     </section>
+
+  
+
+
     <section class="development-partner development-project container-fluid">
         <h2 class="heading"> Government of Madesh Pradesh - Endowment Department</h2>
         <img src="/assets/image/divider.svg" class="divider" >
