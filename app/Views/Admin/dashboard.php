@@ -28,6 +28,11 @@
                             Settings
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin/logout">
+                            Logout
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -53,6 +58,7 @@
                             <label for="dataNepali" class="form-label">Data (Nepali)</label>
                             <input type="text" class="form-control" id="dataNepali" name="data_nepali" placeholder="Enter data in Nepali" required>
                         </div>
+                        
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary">Submit
                             
