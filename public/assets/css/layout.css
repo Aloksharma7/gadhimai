@@ -181,7 +181,7 @@ hr{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-.photo-gallery img:hover {
+.photo-gallery table tr td img:hover {
     transform: scale(1.05);
     transition: 1s ease /* Slight zoom-in effect on hover */
     /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
@@ -205,6 +205,9 @@ hr{
         font-size: 14px;
     }
 }
+
+/* Gorverment section */
+
 .development-partner{
     justify-content: center;
     text-align: center;

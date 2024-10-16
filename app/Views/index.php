@@ -83,6 +83,7 @@
             <h2 class="heading">Photo Gallery</h2>
             <img src="/assets/image/divider.svg" class="divider" >
            <!-- Gallery -->
+            <div class="container-fluid"> 
            <table>
 <tr>
 <td  rowspan="2" class="col-md-6">
@@ -91,8 +92,14 @@
 <td class="col-md-3">
 <img src="/assets/image/gallery/gadhi%20mai%20yag.webp" alt="Smaller Photo 1">
 </td>
+<td class="col-md-3">
+<img src="/assets/image/gallery/gadhi%20mai%20yag.webp" alt="Smaller Photo 1">
+</td>
 </tr>
 <tr>
+<td class="col-md-3">
+<img src="/assets/image/gallery/gadhi%20mai%20yag2.webp" alt="Smaller Photo 1">
+</td>
 <td class="col-md-3">
 <img src="/assets/image/gallery/gadhi%20mai%20yag2.webp" alt="Smaller Photo 1">
 </td>
@@ -120,15 +127,10 @@
 </td>
 
 </table>
-
-
-
-
-          
+</div>
+         
 <!-- Gallery -->
-<button class= "btn btn-primary" style="margin-top:7px;">View More 
-
-<svg id="MDI_arrow-left-thin-circle-outline" data-name="MDI / arrow-left-thin-circle-outline" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+<button class= "btn btn-primary" style="margin-top:7px;">View More <svg id="MDI_arrow-left-thin-circle-outline" data-name="MDI / arrow-left-thin-circle-outline" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
 <g id="Boundary" fill="#FFAF42" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
     <rect width="22" height="22" stroke="none"/>
     <rect x="0.5" y="0.5" width="21" height="21" fill="none"/>
@@ -156,7 +158,7 @@
         <div class="card h-100">
             <img src="/assets/image/political/Upendra-Yadav-new-1-1024x1024.jpg.bv.webp" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Upendra Pd. Yadav</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
