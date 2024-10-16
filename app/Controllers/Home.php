@@ -8,4 +8,9 @@ class Home extends BaseController
     {
         return view('index');
     }
+    public function blog()
+    {
+        return view('admin/blogform');
+    }
+    
 }
