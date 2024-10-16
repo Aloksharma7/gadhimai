@@ -121,7 +121,7 @@ hr{
 }
 
 .btn-primary{
-    background-color: #9a031e;
+    background-color: #9a031e !important;
     font-size: 14px;
     font-weight: 600;
     border-radius: 10px;
@@ -130,18 +130,25 @@ hr{
     align-items: center;
     gap: 8px;
     border: none;
+    outline: none; /* Remove browser default outline */
+    box-shadow: none; /* Remove focus shadow */
 }
 
 .btn-primary:hover{
-    background-color: #fb8b24;
-    color: #181818;
+    background-color: #fb8b24 !important;
+    color: #181818 !important;
 }
 
 .btn-primary:hover svg path {
     transition: .1s ease-in-out;
     fill: black; /* Change SVG color on hover */
 }
-
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus-visible {
+    outline: none !important; /* Prevent browser's default blue outline */
+    box-shadow: none !important; /* Prevent focus shadow */
+}
 /* photo gallaery */
 
 .photo-gallery {
