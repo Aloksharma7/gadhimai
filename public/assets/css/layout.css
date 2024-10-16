@@ -177,8 +177,8 @@ hr{
     height: auto;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; */
     }
 
 .photo-gallery table tr td img:hover {
@@ -191,9 +191,9 @@ hr{
 
 /* Responsive adjustments for different screen sizes */
 @media (max-width: 768px) {
-    .photo-gallery img {
-        width: 100%; /* Ensure images take full width on smaller screens */
-    }
+    .photo-gallery table tr td img {
+        width: 100%; 
+     }
 }
 
 @media (max-width: 576px) {
@@ -217,15 +217,15 @@ hr{
     display: inline;
     gap: 20px;
 }
-.card-row img{
+/* .card-row img{
     border-radius: 100%;
     padding: 5px 75px;
     height: 150px !important;
     min-height: 150px;
     aspect-ratio: 1/1;
     overflow: hidden;
-}
-.card-row img:hover{
+} */
+/* .card-row img:hover{
     overflow: hidden;
     transform: scale(1.05);
-}
+} */
