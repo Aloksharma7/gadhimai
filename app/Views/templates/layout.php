@@ -140,7 +140,7 @@
 
     <!-- Copyright -->
     <div class="text-center mt-4">
-      <p>&copy; 2024 Gadhi Mai Temple. All Rights Reserved.</p>
+      <p>&copy; <?= date("Y"); ?> Gadhi Mai Temple. All Rights Reserved. | Developed & Designed By <a href="https://www.techchampsoftware.com.np" target="_blank"> Tech Champ Software</a></p>
     </div>
   </div>
 </footer>

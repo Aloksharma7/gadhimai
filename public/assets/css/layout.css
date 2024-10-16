@@ -100,26 +100,6 @@ hr{
     /* margin: 0 45px; */
 }
 
-.development-project{
-    padding: 80px 60px;
-    background-color: #fff3e9;
-    border-top: 1px solid #fb8b24;
-}
-
-.development-project .card img{
-    height: 200px;
-    object-fit: cover;
-}
-
-.development-project .card {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
-    border-radius: 15px;
-}
-
-.development-project .card-text{
-    font-size : 14px;
-}
-
 .btn-primary{
     background-color: #9a031e !important;
     font-size: 14px;
@@ -149,18 +129,6 @@ hr{
     outline: none !important; /* Prevent browser's default blue outline */
     box-shadow: none !important; /* Prevent focus shadow */
 }
-/* photo gallaery */
-
-.photo-gallery {
-    background-color: #f5f5f5;
-    padding: 50px 0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .heading{
     font-size: 2rem;
@@ -171,89 +139,7 @@ hr{
     width: 20%!important;
     margin-bottom: 20px!important;
 }
-
-.photo-gallery .row {
-    gap: 10px; /* Adjust the gap for better spacing between images */
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.photo-gallery img {
-    width: 100%;
-    height: auto;
-    margin: 10px;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; */
-    }
-
-    .photo-gallery gallery-3 tr td img {
-        height: 250px!important;
-        aspect-ratio: 1/1 !important;
-        object-fit: cover;
-    }
-
-.photo-gallery table tr td img:hover {
-    transform: scale(1.05);
-    transition: 1s ease /* Slight zoom-in effect on hover */
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
-}
-
-
-
-/* Responsive adjustments for different screen sizes */
-@media (max-width: 768px) {
-    .photo-gallery table tr td img {
-        width: 100%; 
-     }
-}
-
-@media (max-width: 576px) {
-    .heading{
-        font-size: 28px;
-    }
-    .view-more {
-        padding: 8px 20px;
-        font-size: 14px;
-    }
-}
-
-/* Gorverment section */
-
-.development-partner{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-}
-.card-row{
-    display: inline;
-    gap: 20px;
-}
-/* .card-row img{
-    border-radius: 100%;
-    padding: 5px 75px;
-    height: 150px !important;
-    min-height: 150px;
-    aspect-ratio: 1/1;
-    overflow: hidden;
-} */
-/* .card-row img:hover{
-    overflow: hidden;
-    transform: scale(1.05);
-} */
-
-    .arrow {
-        width: 25px; /* Adjust the size as needed */
-        height: 25px; /* Adjust the size as needed */
-        /* fill:#9a031e; Change the color as needed */
-        margin: 10px;
-        /* padding: 2px; */
-        display: inline-block; /* Ensure the arrows are inline */
-        /* border: 1px solid #9a031e; */
-        /* border-radius: 150%; */
-    }
-    
+   
     .footer {
         background-color: var(--dark-red);
         
@@ -269,8 +155,8 @@ hr{
         text-decoration: none;
       }
       .footer a:hover {
-        color:var(--dark-red);
-        text-decoration: underline;
+        color:var(--header-background);
+        text-decoration: none;
       }
       .footer .temple-name {
         font-size: 1.5rem;
@@ -283,5 +169,5 @@ hr{
         font-size: 1.2rem;
       }
       .footer .social-icons a:hover {
-        color: var(--dark-red);
+        color: var(--header-background);
       }
