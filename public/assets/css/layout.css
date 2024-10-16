@@ -154,62 +154,40 @@ hr{
     align-items: center;
 }
 
-.photo-gallery h2 {
-    color: #9a031e;
-    font-size: 36px;
-    margin-bottom: 30px;
-    font-weight: 600;
-    position: relative;
-}
 
-.photo-gallery h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #9a031e;
-    margin: 10px auto;
-    border-radius: 2px;
+.heading{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #9a031e;
+}
+.divider{
+    width: 20%!important;
+    margin-bottom: 20px!important;
 }
 
 .photo-gallery .row {
     gap: 10px; /* Adjust the gap for better spacing between images */
     justify-content: center;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .photo-gallery img {
     width: 100%;
     height: auto;
+    margin: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    }
 
 .photo-gallery img:hover {
-    transform: scale(1.05); /* Slight zoom-in effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: 1s ease /* Slight zoom-in effect on hover */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
-/* Button styles */
-.view-more {
-    margin-top: 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #9a031e;
-    padding: 10px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
-.view-more:hover {
-    background-color: #fb8b24;
-    color: #fff;
-    transform: translateY(-3px); /* Slight lift effect on hover */
-}
 
 /* Responsive adjustments for different screen sizes */
 @media (max-width: 768px) {
@@ -219,11 +197,32 @@ hr{
 }
 
 @media (max-width: 576px) {
-    .photo-gallery h2 {
+    .heading{
         font-size: 28px;
     }
     .view-more {
         padding: 8px 20px;
         font-size: 14px;
     }
+}
+.development-partner{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.card-row{
+    display: inline;
+    gap: 20px;
+}
+.card-row img{
+    border-radius: 100%;
+    padding: 5px 75px;
+    height: 150px !important;
+    min-height: 150px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+.card-row img:hover{
+    overflow: hidden;
+    transform: scale(1.05);
 }
