@@ -9,6 +9,7 @@
     <!-- FontAwesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href=" <?= base_url('/assets/css/layout.css') ?>">
+    <link rel="stylesheet" href=" <?= base_url('/assets/css/index.css') ?>">
         <!-- //Editor Template setup script file -->
         <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 </head>
