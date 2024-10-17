@@ -48,7 +48,7 @@
     margin-bottom: 20px;
 }
 
-.photo-gallery img {
+.photo-gallery .project-img img {
     width: 95%;
     aspect-ratio: 16/10;
     height: auto;
