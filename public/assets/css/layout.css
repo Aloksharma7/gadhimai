@@ -1,58 +1,74 @@
-:root{
-    --header-background : #fb8b24;
+:root {
+    --header-background: #fb8b24;
     --dark-red: #9a031e;
     --white: #fff;
     --menu-button: #ce5524;
     --main-menu: #9a031e;
 }
 
-body{
+body {
     min-height: 100vh;
 }
 
-.header-container {
-    /* Wraps top-menu and main-menu */
-}
+/* .header-container { */
+/* Wraps top-menu and main-menu */
+/* } */
 
-.container-fluid{
+.container-fluid {
     padding-left: 60px;
     padding-right: 60px;
 }
+
 .top-menu {
-    background-color: var(--header-background); /* Orangish Golden */
+    background-color: var(--header-background);
+    /* Orangish Golden */
     color: var(--white);
     padding: 10px 0;
 }
-.navbar{
+
+.nav-link:hover {
+    background-color: #520000;
+}
+
+.navbar {
     padding: 0;
 }
+
 .navbar-brand img {
-    max-width: 248px; /* Increased size */
+    max-width: 248px;
+    /* Increased size */
 }
+
 .social-links a {
     color: var(--white);
     margin: 0 5px;
     font-size: 18px;
 }
+
 .language-switcher {
     color: var(--white);
     font-size: 16px;
 }
+
 .public-dashboard {
     color: var(--white);
     font-size: 16px;
 }
+
 .public-dashboard i {
     margin-right: 5px;
 }
+
 .search-bar {
     position: relative;
     width: 100%;
 }
+
 .search-bar input {
     width: 100%;
     padding-left: 35px;
 }
+
 .search-bar .search-icon {
     position: absolute;
     top: 50%;
@@ -60,8 +76,10 @@ body{
     transform: translateY(-50%);
     color: #aaa;
 }
+
 .sign-in-btn {
-    background-color: var(--menu-button); /* Dark orange */
+    background-color: var(--menu-button);
+    /* Dark orange */
     color: var(--white);
     border-radius: 50px;
     padding: 5px 15px;
@@ -70,37 +88,41 @@ body{
     text-decoration: none;
     margin-left: 15px;
 }
+
 .sign-in-btn i {
     margin-left: 10px;
 }
+
 .main-menu {
-    background-color: var(--main-menu); /* Dark Red */
+    background-color: var(--main-menu);
+    /* Dark Red */
     height: 45px;
 }
+
 .main-menu .nav-link {
     color: var(--white) !important;
 }
 
-.first-row{
+.first-row {
     gap: 20px;
     justify-content: end;
 }
 
-.small-card{
+.small-card {
     gap: 2rem;
 }
 
-.small-card .card{
+.small-card .card {
     border: none;
 }
 
-hr{
+hr {
     border: 1px solid #898989;
     opacity: .4;
     /* margin: 0 45px; */
 }
 
-.btn-primary{
+.btn-primary {
     background-color: #9a031e !important;
     font-size: 14px;
     font-weight: 600;
@@ -110,64 +132,77 @@ hr{
     align-items: center;
     gap: 8px;
     border: none;
-    outline: none; /* Remove browser default outline */
-    box-shadow: none; /* Remove focus shadow */
+    outline: none;
+    /* Remove browser default outline */
+    box-shadow: none;
+    /* Remove focus shadow */
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: #fb8b24 !important;
     color: #181818 !important;
 }
 
 .btn-primary:hover svg path {
     transition: .1s ease-in-out;
-    fill: black; /* Change SVG color on hover */
+    fill: black;
+    /* Change SVG color on hover */
 }
+
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary:focus-visible {
-    outline: none !important; /* Prevent browser's default blue outline */
-    box-shadow: none !important; /* Prevent focus shadow */
+    outline: none !important;
+    /* Prevent browser's default blue outline */
+    box-shadow: none !important;
+    /* Prevent focus shadow */
 }
 
-.heading{
+.heading {
     font-size: 2rem;
     font-weight: 700;
     color: #9a031e;
 }
-.divider{
-    width: 20%!important;
-    margin-bottom: 20px!important;
+
+.divider {
+    width: 20% !important;
+    margin-bottom: 20px !important;
 }
-   
-    .footer {
-        background-color: var(--dark-red);
-        
-        color: white;
-        padding: 40px 0;
-      }
-      .footer h5 {
-        color: var(--white);
-        font-weight: bold;
-      }
-      .footer a {
-        color: var(--white);
-        text-decoration: none;
-      }
-      .footer a:hover {
-        color:var(--header-background);
-        text-decoration: none;
-      }
-      .footer .temple-name {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-      }
-      .footer .social-icons a {
-        color: var(--white);
-        margin-right: 15px;
-        font-size: 1.2rem;
-      }
-      .footer .social-icons a:hover {
-        color: var(--header-background);
-      }
+
+.footer {
+    background-color: var(--dark-red);
+
+    color: white;
+    padding: 40px 0;
+}
+
+.footer h5 {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--header-background);
+    text-decoration: none;
+}
+
+.footer .temple-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer .social-icons a {
+    color: var(--white);
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.footer .social-icons a:hover {
+    color: var(--header-background);
+}

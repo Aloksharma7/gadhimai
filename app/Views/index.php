@@ -4,27 +4,27 @@
     
 <div class="container-fluid d-flex justify-content-center small-card py-3">
     <div class="card temples-card" style="width: 6.5rem;">
+    <img src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>" class="card-img-top" alt="..."/>
+    <p>Gadhimai Mandir</p>
+    </div>
+    <div class="card temples-card" style="width: 6.5rem;">
     <img src="<?= base_url('assets/image/temples/hanuman-mandir.jpg') ?>" class="card-img-top" alt="..."/>
     <p>Hanuman Mandir</p>
     </div>
-    <div class="card" style="width: 6.5rem;">
-    <img src="https://aptemples.ap.gov.in/static/media/kanipakam.9b4bfaa2.webp" class="card-img-top" alt="..."/>
-    <p>Hanuman Mandir</p>
+    <div class="card temples-card" style="width: 6.5rem;">
+    <img src="<?= base_url('assets/image/temples/jorlahi-mata-mandir.jpeg') ?>" class="card-img-top" alt="..."/>
+    <p>Jorlahi Mata Mandir</p>
     </div>
-    <div class="card" style="width: 6.5rem;">
-    <img src="https://aptemples.ap.gov.in/static/media/kanipakam.9b4bfaa2.webp" class="card-img-top" alt="..."/>
-    <p>Hanuman Mandir</p>
+    <div class="card temples-card" style="width: 6.5rem;">
+    <img src="<?= base_url('assets/image/temples/ramna-kamana-mai-mandir.jpg') ?>" class="card-img-top" alt="..."/>
+    <p>Ramna Kamna Mai Mandir</p>
     </div>
-    <div class="card" style="width: 6.5rem;">
-    <img src="https://aptemples.ap.gov.in/static/media/kanipakam.9b4bfaa2.webp" class="card-img-top" alt="..."/>
-    <p>Hanuman Mandir</p>
+    <div class="card temples-card" style="width: 6.5rem;">
+    <img src="<?= base_url('assets/image/temples/sapahi-mai-mandir.jpeg') ?>" class="card-img-top" alt="..."/>
+    <p>Sapahi Mai Mandir</p>
     </div>
-    <div class="card" style="width: 6.5rem;">
-    <img src="https://aptemples.ap.gov.in/static/media/kanipakam.9b4bfaa2.webp" class="card-img-top" alt="..."/>
-    <p>Hanuman Mandir</p>
-    </div>
-    <div class="card" style="width: 6.5rem;">
-    <img src="https://aptemples.ap.gov.in/static/media/kanipakam.9b4bfaa2.webp" class="card-img-top" alt="..."/>
+    <div class="card temples-card" style="width: 6.5rem;">
+    <img src="<?= base_url('assets/image/temples/hanuman-mandir.jpg') ?>" class="card-img-top" alt="..."/>
     <p>Hanuman Mandir</p>
     </div>
 </div>

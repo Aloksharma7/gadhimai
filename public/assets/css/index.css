@@ -1,7 +1,4 @@
-
-
-
-.temples-card img{
+.temples-card img {
     width: 104px;
     height: 104px;
     border: 3px solid rgb(42, 42, 42);
@@ -10,13 +7,13 @@
     object-position: top;
 }
 
-.development-project{
+.development-project {
     padding: 80px 60px;
     background-color: #fff3e9;
     border-top: 1px solid #fb8b24;
 }
 
-.development-project .card img{
+.development-project .card img {
     height: 200px;
     object-fit: cover;
 }
@@ -26,9 +23,10 @@
     border-radius: 15px;
 }
 
-.development-project .card-text{
-    font-size : 14px;
+.development-project .card-text {
+    font-size: 14px;
 }
+
 /* photo gallaery */
 
 .photo-gallery {
@@ -43,28 +41,25 @@
 
 
 .photo-gallery .row {
-    gap: 10px; /* Adjust the gap for better spacing between images */
+    gap: 10px;
+    /* Adjust the gap for better spacing between images */
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .photo-gallery img {
-    width: 100%;
+    width: 95%;
+    aspect-ratio: 16/10;
     height: auto;
     margin: 10px;
     border-radius: 8px;
-    }
-
-    .photo-gallery gallery-3 tr td img {
-        height: 250px!important;
-        aspect-ratio: 1/1 !important;
-        object-fit: cover;
-    }
+    object-fit: cover;
+}
 
 .photo-gallery table tr td img:hover {
     transform: scale(1.05);
-    transition: 1s ease 
+    transition: 1s ease
 }
 
 
@@ -72,14 +67,15 @@
 /* Responsive adjustments for different screen sizes */
 @media (max-width: 768px) {
     .photo-gallery table tr td img {
-        width: 100%; 
-     }
+        width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
-    .heading{
+    .heading {
         font-size: 28px;
     }
+
     .view-more {
         padding: 8px 20px;
         font-size: 14px;
@@ -88,19 +84,19 @@
 
 /* Gorverment section */
 
-.development-partner{
+.development-partner {
     justify-content: center;
     text-align: center;
     align-items: center;
 }
-.card-row{
+
+.card-row {
     display: inline;
     gap: 20px;
 }
 
-    .arrow {
-        width: 60px; 
-        height: 52px; 
-        display: inline-block; 
-    }
- 
+.arrow {
+    width: 60px;
+    height: 52px;
+    display: inline-block;
+}
