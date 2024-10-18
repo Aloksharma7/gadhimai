@@ -100,3 +100,9 @@
     height: 52px;
     display: inline-block;
 }
+.card-devotee{
+    height: 55px;
+    aspect-ratio: 1/1;
+    width:30% !important;
+     margin: 25px auto !important;
+}

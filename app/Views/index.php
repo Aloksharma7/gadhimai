@@ -61,7 +61,55 @@
   <?= base_url("/assets/image/banner.webp") ?>" alt="Banner" width="100%">
 </div>
 
-<Section class="devotee-services container-fluid"> </Section>
+<Section class="devotee-services container-fluid">
+  <br>
+<h2 class="heading text-center">Devotee Services</h2>
+<img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block" />
+
+<div class="container py-5 d-block ">
+  <div class="row gap-4 justify-content-evenly">
+        <div class="card" style="width: 18rem; justify-content: center;">
+              <img src="/assets/image/seva-devotee.svg" class="card-img-center card-devotee"  alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Seva</h5>
+                  <p class="card-text">Connect and perform Seva/Abhishekam/Homam, etc from anywhere using Paroksha Seva.</p>
+                  <a class="btn btn-primary">Vist Now</a>
+              </div>
+          </div>
+
+          <div class="card" style="width: 18rem; justify-content: center;">
+              <img src="/assets/image/donate.png" class="card-img-center card-devotee"  alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Donate</h5>
+                  <p class="card-text">Connect and perform Seva/Abhishekam/Homam, etc from anywhere using Paroksha Seva.</p>
+                  <a class="btn btn-primary">Vist Now</a>
+              </div>
+          </div>
+
+          <div class="card" style="width: 18rem; justify-content: center;">
+              <img src="/assets/image/accommodation.svg" class="card-img-center card-devotee"  alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Accommondation</h5>
+                  <p class="card-text">Connect and perform Seva/Abhishekam/Homam, etc from anywhere using Paroksha Seva.</p>
+                  <a class="btn btn-primary">Vist Now</a>
+              </div>
+          </div>
+
+          <div class="card" style="width: 18rem; justify-content: center;">
+              <img src="/assets/image/templeicon.png" class="card-img-center card-devotee"  alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">Temple</h5>
+                  <p class="card-text">Connect and perform Seva/Abhishekam/Homam, etc from anywhere using Paroksha Seva.</p>
+                  <a class="btn btn-primary">Vist Now</a>
+              </div>
+          </div>
+
+          
+
+
+  </div>
+</div>
+</Section>
 
 <div
   class="development-project container-fluid d-flex justify-content-between my-3"
