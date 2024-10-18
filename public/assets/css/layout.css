@@ -108,13 +108,6 @@ body {
     justify-content: end;
 }
 
-.small-card {
-    gap: 2rem;
-}
-
-.small-card .card {
-    border: none;
-}
 
 hr {
     border: 1px solid #898989;

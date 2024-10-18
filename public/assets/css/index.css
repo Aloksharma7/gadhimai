@@ -69,6 +69,11 @@
     .photo-gallery table tr td img {
         width: 100%;
     }
+
+    .container-fluid{
+        padding-left: unset !important;
+        padding-right: unset !important;
+    }
 }
 
 @media (max-width: 576px) {
@@ -105,4 +110,13 @@
     aspect-ratio: 1/1;
     width:30% !important;
      margin: 25px auto !important;
+}
+
+
+.small-card {
+    gap: 1rem;
+}
+
+.small-card .card {
+    border: none;
 }

@@ -1,7 +1,7 @@
 <?= $this->extend('templates/layout') ?>
 <?= $this->section('content') ?>
 
-<div class="container-fluid d-flex justify-content-center small-card py-3">
+<div class="container-fluid d-flex flex-wrap justify-content-center small-card py-3">
   <div class="card temples-card" style="width: 6.5rem">
     <img
       src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
