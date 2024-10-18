@@ -181,7 +181,7 @@
     </div>
   </div>
 
-  <div class="card card-2" style="width: 18rem">
+  <div class="card card-2 d-none d-sm-block" style="width: 18rem">
     <img src="
     <?= base_url("/assets/image/god1.png") ?>
     " class="card-img-top" alt="...">
@@ -194,7 +194,7 @@
     </div>
   </div>
 
-  <div class="card card-3" style="width: 18rem">
+  <div class="card card-3 d-none d-sm-block" style="width: 18rem">
     <img src="<?= base_url("/assets/image/god1.png") ?>" class="card-img-top"
     alt="...">
     <div class="card-body">
@@ -304,7 +304,7 @@
   <h2 class="heading">Government of Madesh Pradesh - Endowment Department</h2>
   <img src="/assets/image/divider.svg" class="divider" />
   <div class="row card-row d-flex justify-content-evenly development-partner">
-    <div class="col-md-3 mb-3">
+    <div class="col-md-3 mb-3" style="width: 18rem;" >
       <div class="card h-100">
         <img
           src="/assets/image/political/Upendra-Yadav-new-1-1024x1024.jpg.bv.webp"
@@ -321,7 +321,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 mb-3">
+    <div class="col-md-3 mb-3 " style="width: 18rem;">
       <div class="card h-100">
         <img
           src="/assets/image/political/Upendra-Yadav-new-1-1024x1024.jpg.bv.webp"
@@ -338,7 +338,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 mb-3">
+    <div class="col-md-3 mb-3" style="width: 18rem;">
       <div class="card h-100">
         <img
           src="/assets/image/political/Upendra-Yadav-new-1-1024x1024.jpg.bv.webp"

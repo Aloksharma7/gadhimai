@@ -39,6 +39,10 @@ body {
     /* Increased size */
 }
 
+#navbarResponsive{
+    background-color: var(--dark-red);
+}
+
 .social-links a {
     color: var(--white);
     margin: 0 5px;

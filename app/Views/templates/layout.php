@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <!-- Right side: Two rows -->
-                    <div class="col-md-6">
+                    <div class="col-md-6 d-none d-sm-block">
                         <!-- First Row -->
                         <div class="d-flex first-row">
                             <div class="social-links d-flex">
@@ -64,14 +64,14 @@
             </div>
         </div>
         <!-- Main Navigation Menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark main-menu">
+        <nav class="navbar navbar-expand-lg navbar-dark main-menu z-1">
             <div class="container-fluid">
                 <!-- Navbar toggler for mobile devices -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Navbar links -->
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse ps-2" id="navbarResponsive">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
