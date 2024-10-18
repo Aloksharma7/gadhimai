@@ -17,6 +17,9 @@ use CodeIgniter\Router\RouteCollection;
 // });
 
 $routes->get('/', 'Home::index');
+$routes->get('/history', 'Home::history');
+$routes->get('/gallery', 'Home::gallery');
+$routes->get('/contact', 'Home::contact');
 // $routes->get('/blog', 'Home::blog');
 
 // Protect the `/admin` route with the `auth` filter to ensure the user is logged in

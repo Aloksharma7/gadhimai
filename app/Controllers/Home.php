@@ -12,5 +12,17 @@ class Home extends BaseController
     {
         return view('admin/blogform');
     }
+    public function history()
+    {
+        return view('history');
+    }
+    public function gallery()
+    {
+        return view('gallery');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
     
 }

@@ -72,10 +72,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">History</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
                         <?php if(session()->get('isLoggedIn')): ?>
                             <li class="nav-item"><a class="nav-link" href="/admin/blog">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="/admin/blog/create">Create new Blog</a></li>
