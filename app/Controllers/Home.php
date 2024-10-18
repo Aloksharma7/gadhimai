@@ -10,7 +10,7 @@ class Home extends BaseController
     }
     public function blog()
     {
-        return view('admin/blogform');
+        return view('blog/blogs');
     }
     public function history()
     {

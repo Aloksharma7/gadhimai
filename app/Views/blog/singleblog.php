@@ -1,7 +1,7 @@
 <?= $this->extend('templates/layout') ?>
 <?= $this->section('styles') ?>
 <!-- all css linking here  -->
-<link rel="stylesheet" href="<?= base_url("assets/css/history.css") ?> ">
+<link rel="stylesheet" href="<?= base_url("assets/css/singleblog.css") ?> ">
 
 <?= $this->endSection() ?>
 

@@ -10,6 +10,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href=" <?= base_url('/assets/css/layout.css') ?>">
     <link rel="stylesheet" href=" <?= base_url('/assets/css/index.css') ?>">
+        <!-- Include additional CSS files or inline styles from specific pages -->
+        <?= $this->renderSection('styles') ?>
     <!-- Editor Template setup script file -->
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 </head>
@@ -74,10 +76,10 @@
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
                         <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/admin/blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
                         <?php if(session()->get('isLoggedIn')): ?>
-                            <li class="nav-item"><a class="nav-link" href="/admin/blog">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/admin/blog"> Admin Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="/admin/blog/create">Create new Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="/admin/logout">Log Out</a></li>
                         <?php endif; ?>
