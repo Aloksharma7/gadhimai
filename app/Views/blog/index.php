@@ -2,36 +2,53 @@
 <?= $this->section('content') ?>
 
 <div class="container mt-5">
-    <h3>Blog Posts</h3>
-    <button class="btn">
-    <a href="/admin/blog/create" class="btn btn-primary">Create New Post</a>
-    </button>
-    <table class="table mt-4">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($posts as $post): ?>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Manage Blog Posts</h2>
+        <a href="<?= base_url('admin/blog/create') ?>" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Create New Post
+        </a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover align-middle">
+            <thead class="table-dark">
                 <tr>
-                    <td><?= $post['post_title']; ?></td>
-                    <td><?= $post['category']; ?></td>
-                    <td><?= $post['status']; ?></td>
-                    <td>
-                        <a href="/admin/blog/edit/<?= $post['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
-                        <form action="/admin/blog/delete/<?= $post['id']; ?>" method="post" style="display:inline-block;">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
-                        </form>
-                    </td>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                    <th class="text-center">Action</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php if (!empty($posts)): ?>
+                    <?php foreach ($posts as $post): ?>
+                        <tr>
+                            <td><?= esc($post['post_title']) ?></td>
+                            <td><?= esc($post['post_category']) ?></td>
+                            <td>
+                                <span class="badge bg-<?= $post['status'] == 'published' ? 'success' : 'secondary' ?>">
+                                    <?= ucfirst($post['status']) ?>
+                                </span>
+                            </td>
+                            <td class="text-center">
+                                <a href="<?= base_url('admin/blog/edit/' . $post['id']) ?>" class="btn btn-sm btn-warning">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a href="<?= base_url('admin/blog/delete/' . $post['id']) ?>" class="btn btn-sm btn-danger" 
+                                   onclick="return confirm('Are you sure you want to delete this post?');">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="4" class="text-center">No posts available</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <?= $this->endSection() ?>

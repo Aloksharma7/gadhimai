@@ -21,6 +21,8 @@ $routes->get('/blog', 'BlogController::blogs');
 $routes->get('/history', 'Home::history');
 $routes->get('/gallery', 'Home::gallery');
 $routes->get('/contact', 'Home::contact');
+$routes->get('blog/view/(:segment)', 'BlogController::view/$1');
+
 
 // Protect the `/admin` route with the `auth` filter to ensure the user is logged in
 $routes->group('admin', ['filter' => 'auth', 'namespace' => 'App\Controllers\AdminControllers'], static function ($routes) {
@@ -50,7 +52,7 @@ $routes->group('admin/blog', ['namespace' => 'App\Controllers', 'filter' => 'aut
     $routes->post('update/(:num)', 'BlogController::update/$1'); // Handle form submission to update the post
 
     // Route to delete a blog post
-    $routes->delete('delete/(:num)', 'BlogController::delete/$1');  // Handle deletion of a post by ID
+    $routes->get('delete/(:num)', 'BlogController::delete/$1');  // Handle deletion of a post by ID
 });
 
 
