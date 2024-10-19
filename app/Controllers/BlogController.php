@@ -14,6 +14,13 @@ class BlogController extends Controller
 
         return view('blog/index', $data);  // Load the view
     }
+    public function blogs()
+    {
+        $postModel = new PostModel();
+        $data['blogs'] = $postModel->findAll();  // Fetch all posts
+
+        return view('blog/blogs', $data);  // Load the view
+    }
 
     public function create()
     {

@@ -17,7 +17,7 @@ use CodeIgniter\Router\RouteCollection;
 // });
 
 $routes->get('/', 'Home::index');
-$routes->get('/blog', 'Home::blog');
+$routes->get('/blog', 'BlogController::blogs');
 $routes->get('/history', 'Home::history');
 $routes->get('/gallery', 'Home::gallery');
 $routes->get('/contact', 'Home::contact');

@@ -8,10 +8,6 @@ class Home extends BaseController
     {
         return view('index');
     }
-    public function blog()
-    {
-        return view('blog/blogs');
-    }
     public function history()
     {
         return view('history');
