@@ -90,6 +90,9 @@
         padding: 8px 20px;
         font-size: 14px;
     }
+    .small-card{
+        justify-content: flex-start !important;
+    }
 }
 
 /* Gorverment section */
@@ -120,13 +123,31 @@
 
 .small-card {
     gap: 1rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    scroll-snap-align: start;
+    
 }
 
 .small-card .card {
     border: none;
+    min-width: 104px;
 }
 
+.small-card:first-child {
+    margin-left: 0.5rem; /* Additional space for the first card */
+  }
+.small-card:last-child {
+    margin-right: 0.5rem; /* Additional space for the first card */
+  }
 
+.small-card::-webkit-scrollbar {
+    display: none; /* Hide scroll bar in Chrome, Safari, and newer Edge */
+  }
+
+
+  
 
 /* Events calender code  */
 
@@ -182,4 +203,10 @@
     border: none;
     border-radius: 10px;
     overflow: hidden;
+}
+
+/* Carousel code  */
+.carousel-item>img{
+    aspect-ratio: 16/5;
+    object-fit: cover;
 }

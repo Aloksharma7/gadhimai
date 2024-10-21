@@ -42,7 +42,7 @@
                                 English
                             </div> |
                             <div class="public-dashboard">
-                                <i class="fas fa-tachometer-alt"></i> <a href="#"
+                                <i class="fas fa-tachometer-alt"></i> <a href="/"
                                     style="color: #fff; text-decoration: none;">Public Dashboard</a>
                             </div> |
                         </div>
@@ -115,6 +115,17 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/admin/events">View Events</a></li>
                                 <li><a class="dropdown-item" href="/admin/events/create">Create Events</a></li>
+                            </ul>
+                        </li>                        
+                        <!-- Carousel itmes                 -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Admin Carousel
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/admin/carousel">View Events</a></li>
+                                <li><a class="dropdown-item" href="/admin/carousel/create">Create Events</a></li>
                             </ul>
                         </li>                        
                         <li class="nav-item"><a class="nav-link" href="/admin/logout">Log Out</a></li>

@@ -1,7 +1,7 @@
 <?= $this->extend('templates/layout') ?>
 <?= $this->section('content') ?>
 
-<div class="container-fluid d-flex flex-wrap justify-content-center small-card py-3">
+<div class="container-fluid d-flex justify-content-center small-card py-3">
   <div class="card temples-card" style="width: 6.5rem">
     <img
       src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
@@ -88,10 +88,29 @@
   <hr />
 </div>
 
-<div class="container-fluid">
-  <img src="
-  <?= base_url("/assets/image/banner.webp") ?>" alt="Banner" width="100%">
+ <!-- crousel, banner code  -->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <?php foreach ($carouselItems as $index => $item): ?>
+            <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+                <img src="<?= esc($item['image_url']) ?>" class="d-block w-100" alt="<?= esc($item['title']) ?>">
+                <div class="carousel-caption d-none d-md-block">
+                    <!-- <h5><?// esc($item['title']) ?></h5> -->
+                    <!-- <p><?// esc($item['description']) ?></p> -->
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+
 
 <Section class="devotee-services container-fluid">
   <br>

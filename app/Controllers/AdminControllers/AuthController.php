@@ -3,14 +3,35 @@
 namespace App\Controllers\AdminControllers;
 use App\Controllers\BaseController; 
 use App\Models\UserModel;
+use App\Models\CarouselModel;
+use App\Models\EventModel;
+use App\Models\PostModel;
+use App\Models\NewsNoticeModel;
 
 
 class AuthController extends BaseController
 {
     public function index()
     {
-        return view('admin/dashboard');
-        // echo "admin area";
+        // Initialize models
+        $carouselModel = new CarouselModel();
+        $eventModel = new EventModel();
+        $blogModel = new PostModel();
+        $newsNoticeModel = new NewsNoticeModel();
+
+        // Get counts of various items
+        $data['carouselCount'] = $carouselModel->countAll();
+        $data['eventCount'] = $eventModel->countAll();
+        $data['blogCount'] = $blogModel->countAll();
+        $data['newsNoticeCount'] = $newsNoticeModel->countAll();
+
+        // Get latest items
+        $data['latestCarouselItems'] = $carouselModel->orderBy('id', 'DESC')->findAll(3); // Get the latest 3 carousel items
+        $data['latestEvents'] = $eventModel->orderBy('event_date', 'DESC')->findAll(3); // Get the latest 3 events
+        $data['latestBlogs'] = $blogModel->orderBy('id', 'DESC')->findAll(3); // Get the latest 3 blog posts
+
+        // Load the dashboard view
+        return view('admin/dashboard', $data);
     }
 
     public function login()

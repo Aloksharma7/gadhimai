@@ -97,3 +97,13 @@ $routes->group('admin/events', ['namespace' => 'App\Controllers', 'filter' => 'a
     // Route to delete an event
     $routes->get('delete/(:num)', 'EventController::delete/$1');  // Handle deletion of an event by ID
 });
+
+
+$routes->group('admin/carousel', ['namespace' => 'App\Controllers', 'filter' => 'auth'], function ($routes) {
+    $routes->get('/', 'CarouselController::index'); // View all carousel items
+    $routes->get('create', 'CarouselController::create'); // Create new carousel item
+    $routes->post('store', 'CarouselController::store'); // Store new carousel item
+    $routes->get('edit/(:num)', 'CarouselController::edit/$1'); // Edit carousel item
+    $routes->post('update/(:num)', 'CarouselController::update/$1'); // Update carousel item
+    $routes->get('delete/(:num)', 'CarouselController::delete/$1'); // Delete carousel item
+});
