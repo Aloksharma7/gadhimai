@@ -6,34 +6,34 @@
         <div class="col-md-8">
             <div class="card shadow-sm">
                 <div class="card-header bg-primary text-white">
-                    <h4>Create a New Blog Post</h4>
+                    <h4>Create a New News/Notice</h4>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('admin/blog/store') ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('admin/newsnotice/store') ?>" method="post" enctype="multipart/form-data">
 
                         <div class="form-group mb-3">
-                            <label for="post_title">Post Title</label>
-                            <input type="text" name="post_title" class="form-control" placeholder="Enter post title" required>
+                            <label for="title">Title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Enter title" required>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="post_title_nepali">Post Title (Nepali)</label>
-                            <input type="text" name="post_title_nepali" class="form-control" placeholder="नेपाली शीर्षक लेख्नुहोस्" required>
+                            <label for="title_nepali">Title (Nepali)</label>
+                            <input type="text" name="title_nepali" class="form-control" placeholder="नेपाली शीर्षक लेख्नुहोस्" required>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="post_content">Post Content</label>
-                            <textarea name="post_content" class="form-control" rows="5" placeholder="Write your post content here" required></textarea>
+                            <label for="content">Content</label>
+                            <textarea name="content" class="form-control" rows="5" placeholder="Write the content here" required></textarea>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="post_content_nepali">Post Content (Nepali)</label>
-                            <textarea name="post_content_nepali" class="form-control" rows="5" placeholder="नेपाली सामग्री लेख्नुहोस्" required></textarea>
+                            <label for="content_nepali">Content (Nepali)</label>
+                            <textarea name="content_nepali" class="form-control" rows="5" placeholder="नेपाली सामग्री लेख्नुहोस्" required></textarea>
                         </div>
 
                         <div class="form-group mb-3">
-                            <label for="post_category">Category</label>
-                            <input type="text" name="post_category" class="form-control" placeholder="Enter post category" required>
+                            <label for="category">Category</label>
+                            <input type="text" name="category" class="form-control" placeholder="Enter category" required>
                         </div>
 
                         <div class="form-group mb-3">
@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary w-100">Create Post</button>
+                            <button type="submit" class="btn btn-primary w-100">Create News/Notice</button>
                         </div>
                     </form>
                 </div>

@@ -118,7 +118,10 @@ hr {
     opacity: .4;
     /* margin: 0 45px; */
 }
-
+a{
+    color: white;
+    text-decoration: none;
+}
 .btn-primary, .btn-outline-primary {
     background-color: #9a031e !important;
     font-size: 14px;

@@ -29,18 +29,5 @@
     </form>
 </div>
 
-<!-- CKEditor 5 with the Image Plugin -->
-<script src="https://cdn.ckeditor.com/ckeditor5/38.1.0/classic/ckeditor.js"></script>
-<script>
-    ClassicEditor
-        .create(document.querySelector('#editor'), {
-            ckfinder: {
-                uploadUrl: '/admin/posts/upload_image'  // URL to handle image upload
-            }
-        })
-        .catch(error => {
-            console.error(error);
-        });
-</script>
 
 <?= $this->endSection() ?>

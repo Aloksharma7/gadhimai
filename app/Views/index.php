@@ -12,6 +12,38 @@
   </div>
   <div class="card temples-card" style="width: 6.5rem">
     <img
+      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <p>Gadhimai Mandir</p>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <p>Gadhimai Mandir</p>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <p>Gadhimai Mandir</p>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <p>Gadhimai Mandir</p>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
       src="<?= base_url('assets/image/temples/hanuman-mandir.jpg') ?>"
       class="card-img-top"
       alt="..."
@@ -217,19 +249,19 @@
       <tr>
         <td rowspan="2" class="col-md-6">
           <img
-            src="/assets/image/gallery/gadhi%20mai%20mandir.webp"
+            src="/assets/image/gallery/devotees1.webp"
             alt="Main Photo"
           />
         </td>
         <td class="col-md-3">
           <img
-            src="/assets/image/gallery/gadhi%20mai%20yag.webp"
+            src="/assets/image/gallery/devotees2.webp"
             alt="Smaller Photo 1"
           />
         </td>
         <td class="col-md-3">
           <img
-            src="/assets/image/gallery/gadhi%20mai%20yag.webp"
+            src="/assets/image/gallery/festival1.webp"
             alt="Smaller Photo 1"
           />
         </td>
@@ -237,13 +269,13 @@
       <tr>
         <td class="col-md-3">
           <img
-            src="/assets/image/gallery/gadhi%20mai%20yag2.webp"
+            src="/assets/image/gallery/festival2.webp"
             alt="Smaller Photo 1"
           />
         </td>
         <td class="col-md-3">
           <img
-            src="/assets/image/gallery/gadhi%20mai%20yag2.webp"
+            src="/assets/image/gallery/temple1.webp"
             alt="Smaller Photo 1"
           />
         </td>
@@ -256,7 +288,7 @@
       </td>
       <td class="col-md-3">
         <img
-          src="/assets/image/gallery/Gadhimai%20temple%20puja.webp"
+          src="/assets/image/gallery/temple2.webp"
           alt="Smaller Photo 1"
         />
       </td>
@@ -269,8 +301,9 @@
     </table>
   </div>
   <!-- Gallery -->
+  <a href= " <?= base_url("gallery") ?> ">
   <button class="btn btn-primary" style="margin-top: 7px">
-    View More
+     View More 
     <svg
       id="MDI_arrow-left-thin-circle-outline"
       data-name="MDI / arrow-left-thin-circle-outline"
@@ -298,6 +331,7 @@
       />
     </svg>
   </button>
+  </a>
 </section>
 
 <section class="development-partner development-project container-fluid">
@@ -320,6 +354,8 @@
         </div>
       </div>
     </div>
+
+    
 
     <div class="col-md-3 mb-3 " style="width: 18rem;">
       <div class="card h-100">
@@ -356,5 +392,99 @@
     </div>
   </div>
 </section>
+
+<!-- Youtube Videos Section -->
+<section class="youtube-video py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Watch Our Latest Video</h2>
+        <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-5" />
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/ERm7Gk2Qzc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Event calendar code -->
+<div class="container-fluid py-5 development-project">
+    <h2 class="text-center mb-4 heading">Upcoming Events</h2>
+    <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
+
+    <div class="row">
+        <?php if (!empty($events)): ?>
+            <?php foreach ($events as $event): ?>
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow d-flex flex-row p-2">
+                        <div class="event-date flex-shrink-0 text-center d-flex flex-column align-items-center justify-content-center">
+                            <div class="day"><?= date('d', strtotime($event['event_date'])) ?></div>
+                            <div class="month"><?= date('F', strtotime($event['event_date'])) ?></div>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title"><?= esc($event['event_title']) ?></h5>
+                            <p class="card-text"><?= esc($event['event_description']) ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <div class="col-12 text-center">
+                <p>No upcoming events found.</p>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+
+
+
+<!-- Gadhimai Location Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4 heading">Gadhimai Temple Location</h2>
+    <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
+
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-lg-8 mb-4">
+    <div class="card h-100 shadow">
+        <div class="card-body">
+            <h5 class="card-title">Find Us on the Map</h5>
+            <div class="map-responsive">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3568.430971146381!2d85.04519311503889!3d26.993598083201328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399336c3b714cdfd%3A0x2fa6b1579023a216!2sGadhimai%20Temple!5e0!3m2!1sen!2snp!4v1697798233473!5m2!1sen!2snp&t=p"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Information Column -->
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Temple Information</h5>
+                    <p class="card-text">Gadhimai Temple is located in Bara District, Nepal. It is a renowned Hindu temple dedicated to the goddess Gadhimai.</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Address:</strong> Bariyarpur, Bara, Nepal</li>
+                        <li><strong>Phone:</strong> +977-123-456789</li>
+                        <li><strong>Email:</strong> info@gadhimaitemple.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <?= $this->endSection() ?>

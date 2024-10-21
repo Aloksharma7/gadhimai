@@ -58,7 +58,41 @@
                             <label for="dataNepali" class="form-label">Data (Nepali)</label>
                             <input type="text" class="form-control" id="dataNepali" name="data_nepali" placeholder="Enter data in Nepali" required>
                         </div>
-                        
+                        <div id="editor">
+            <p>Hello from CKEditor 5!</p>
+        </div>
+
+        <script type="importmap">
+            {
+                "imports": {
+                    "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.2.0/ckeditor5.js",
+                    "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.2.0/"
+                }
+            }
+        </script>
+
+        <script type="module">
+            import {
+                ClassicEditor,
+                Essentials,
+                Bold,
+                Italic,
+                Font,
+                Paragraph
+            } from 'ckeditor5';
+
+            ClassicEditor
+                .create( document.querySelector( '#editor' ), {
+                    plugins: [ Essentials, Bold, Italic, Font, Paragraph ],
+                    toolbar: [
+                        'undo', 'redo', '|', 'bold', 'italic', '|',
+                        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+                    ]
+                } )
+                .then( /* ... */ )
+                .catch( /* ... */ );
+        </script>
+
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary">Submit
                             
