@@ -51,6 +51,14 @@
                                 <option value="published" <?= $post['status'] == 'published' ? 'selected' : '' ?>>Published</option>
                             </select>
                         </div>
+                        
+                        <!-- Post Date -->
+                        <div class="mb-3">
+    <label for="post_date" class="form-label">Post Date</label>
+    <input type="date" name="post_date" id="post_date" class="form-control" 
+           value="<?= esc(date('Y-m-d', strtotime($post['updated_at']))) ?>" required> 
+</div>
+
 
                         <!-- Image Upload Section -->
                         <div class="mb-3">

@@ -45,6 +45,11 @@
                         </div>
 
                         <div class="form-group mb-3">
+                            <label for="news_notice_date">news /Notice Date</label>
+                            <input type="date" name="news_notice_date" class="form-control" required>
+                        </div>
+
+                        <div class="form-group mb-3">
                             <label for="img_url">Upload Image</label>
                             <input type="file" name="img_url" class="form-control-file">
                         </div>

@@ -10,7 +10,11 @@
     <div class="row">
         <div class="col-md-10 mx-auto">
             <!-- News/Notice Header -->
+            <?php if (session()->get('language') === 'ne') : ?>
+                <h1 class="text-center mb-4 display-4"><?= esc($newsnotice['title_nepali']) ?></h1>
+                <?php else: ?>
             <h1 class="text-center mb-4 display-4"><?= esc($newsnotice['title']) ?></h1>
+            <?php endif ?>
             <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
             
             <!-- News/Notice Details -->
@@ -29,7 +33,11 @@
 
                     <!-- News/Notice Content -->
                     <div class="mt-4">
+                    <?php if (session()->get('language') === 'ne') : ?>
+                        <p class="lead"><?= esc($newsnotice['content_nepali']) ?></p>
+                    <?php else: ?>
                         <p class="lead"><?= esc($newsnotice['content']) ?></p>
+                        <?php endif ?>
                     </div>
                     
                     <!-- Nepali Title and Content (if available) -->

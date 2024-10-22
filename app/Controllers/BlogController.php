@@ -47,7 +47,7 @@ class BlogController extends BaseController
         
         $postModel = new PostModel();
         $slug = url_title($this->request->getPost('post_title'), '-', true);
-
+    
         // Validate form input
         $validation = $this->validate([
             'post_title' => 'required|max_length[255]',
@@ -56,13 +56,14 @@ class BlogController extends BaseController
             'post_content_nepali' => 'required',
             'post_category' => 'required',
             'status' => 'required',
+            'post_date' => 'required|valid_date', // Make sure to validate the date
             'img_url' => [
                 'uploaded[img_url]',
                 'mime_in[img_url,image/jpg,image/jpeg,image/png]',
                 'max_size[img_url,2048]'
             ]
         ]);
-
+    
         if (!$validation) {
             // Pass validation errors and old input data to the view
             return view('blog/create', [
@@ -70,7 +71,7 @@ class BlogController extends BaseController
                 'old_input' => $this->request->getPost()
             ]);
         }
-
+    
         // Handle image upload
         $img = $this->request->getFile('img_url');
         if ($img->isValid() && !$img->hasMoved()) {
@@ -80,7 +81,10 @@ class BlogController extends BaseController
         } else {
             $img_url = '';
         }
-
+    
+        // Retrieve the date from the form
+        $post_date = $this->request->getPost('post_date');
+    
         // Insert into database
         $postModel->save([
             'post_title' => $this->request->getPost('post_title'),
@@ -90,11 +94,13 @@ class BlogController extends BaseController
             'post_category' => $this->request->getPost('post_category'),
             'slug' => $slug,
             'status' => $this->request->getPost('status'),
-            'img_url' => $img_url
+            'img_url' => $img_url,
+            'updated_at' => $post_date // Set the updated_at field
         ]);
-
+    
         return redirect()->to('admin/blog');
     }
+    
 
     public function edit($id)
     {
@@ -109,7 +115,7 @@ class BlogController extends BaseController
         
         $postModel = new PostModel();
         $slug = url_title($this->request->getPost('post_title'), '-', true);
-
+    
         // Validate form input
         $validation = $this->validate([
             'post_title' => 'required|max_length[255]',
@@ -118,12 +124,13 @@ class BlogController extends BaseController
             'post_content_nepali' => 'required',
             'post_category' => 'required',
             'status' => 'required',
+            'post_date' => 'required|valid_date', // Validate the post date
             'img_url' => [
                 'mime_in[img_url,image/jpg,image/jpeg,image/png]',
                 'max_size[img_url,2048]'
             ]
         ]);
-
+    
         if (!$validation) {
             // Pass validation errors and the post data to the view
             return view('blog/edit', [
@@ -131,7 +138,7 @@ class BlogController extends BaseController
                 'post' => $postModel->find($id)
             ]);
         }
-
+    
         // Handle image upload (optional)
         $img_url = $this->request->getPost('current_img_url'); // Default to current image
         $img = $this->request->getFile('img_url');
@@ -140,7 +147,10 @@ class BlogController extends BaseController
             $img->move(ROOTPATH . 'public/uploads', $imageName);
             $img_url = base_url('uploads/' . $imageName); // New image URL
         }
-
+    
+        // Retrieve the post date from the form
+        $post_date = $this->request->getPost('post_date');
+    
         // Update the database
         $postModel->update($id, [
             'post_title' => $this->request->getPost('post_title'),
@@ -150,11 +160,13 @@ class BlogController extends BaseController
             'post_category' => $this->request->getPost('post_category'),
             'slug' => $slug,
             'status' => $this->request->getPost('status'),
+            'updated_at' => $post_date, // Include the post date in the update
             'img_url' => $img_url
         ]);
-
+    
         return redirect()->to('admin/blog');
     }
+    
 
     public function delete($id)
     {

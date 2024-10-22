@@ -51,6 +51,14 @@
                             </select>
                         </div>
 
+                                                <!-- Post Date -->
+                                                <div class="mb-3">
+    <label for="news_notice_date" class="form-label">News/Notice Date</label>
+    <input type="date" name="news_notice_date" id="news_notice_date" class="form-control" 
+           value="<?= esc(date('Y-m-d', strtotime($newsnotice['updated_at']))) ?>" required> 
+</div>
+
+
                         <!-- Image Upload Section -->
                         <div class="mb-3">
                             <label for="img_url" class="form-label">Current Image</label><br>

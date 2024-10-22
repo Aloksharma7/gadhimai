@@ -56,6 +56,7 @@ class NewsNoticeController extends BaseController
             'content_nepali' => 'required',
             'category' => 'required',
             'status' => 'required',
+            'news_notice_date' => 'required',
             'img_url' => [
                 'uploaded[img_url]',
                 'mime_in[img_url,image/jpg,image/jpeg,image/png]',
@@ -90,6 +91,7 @@ class NewsNoticeController extends BaseController
             'category' => $this->request->getPost('category'),
             'slug' => $slug,
             'status' => $this->request->getPost('status'),
+            'updated_at' => $this->request->getPost('news_notice_date'),
             'img_url' => $img_url
         ]);
 
@@ -116,6 +118,7 @@ class NewsNoticeController extends BaseController
             'content' => 'required',
             'category' => 'required',
             'status' => 'required',
+            'news_notice_date' => 'required',
             'img_url' => [
                 'mime_in[img_url,image/jpg,image/jpeg,image/png]',
                 'max_size[img_url,2048]'
@@ -146,6 +149,7 @@ class NewsNoticeController extends BaseController
             'category' => $this->request->getPost('category'),
             'slug' => $slug,
             'status' => $this->request->getPost('status'),
+            'updated_at' => $this->request->getPost('news_notice_date'),
             'img_url' => $img_url
         ]);
 

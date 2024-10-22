@@ -17,6 +17,7 @@ class PostModel extends Model
         'post_category',
         'slug',
         'status',
+        'updated_at',
         'img_url'
     ];
 

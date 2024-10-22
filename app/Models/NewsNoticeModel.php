@@ -17,6 +17,7 @@ class NewsNoticeModel extends Model
         'category',            // Changed from 'post_category' to 'category'
         'slug',
         'status',
+        'updated_at',
         'img_url'
     ];
 

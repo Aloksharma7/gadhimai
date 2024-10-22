@@ -10,7 +10,11 @@
     <div class="row">
         <div class="col-md-10 mx-auto">
             <!-- Blog Post Header -->
+            <?php if (session()->get('language') === 'ne') : ?>
+                <h1 class="text-center mb-4 display-4"><?= esc($blog['post_title_nepali']) ?></h1>
+                <?php else: ?>
             <h1 class="text-center mb-4 display-4"><?= esc($blog['post_title']) ?></h1>
+            <?php endif ?>
             <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
             
             <!-- Blog Post Details -->
@@ -29,16 +33,13 @@
 
                     <!-- Blog Content -->
                     <div class="mt-4">
+                    <?php if (session()->get('language') === 'ne') : ?>
+                        <p class="lead"><?= esc($blog['post_content_nepali']) ?></p>
+                        <?php else: ?>
                         <p class="lead"><?= esc($blog['post_content']) ?></p>
+                        <?php endif ?>
                     </div>
                     
-                    <!-- Nepali Title and Content (if available) -->
-                    <?php if (!empty($blog['post_title_nepali']) && !empty($blog['post_content_nepali'])) : ?>
-                        <div class="mt-5">
-                            <h3 class="mb-3"><?= esc($blog['post_title_nepali']) ?></h3>
-                            <p><?= esc($blog['post_content_nepali']) ?></p>
-                        </div>
-                    <?php endif; ?>
                     
                     <!-- Back to Blogs Button -->
                     <a href="<?= site_url('blog') ?>" class="btn btn-outline-primary mt-4">← Back to Blogs</a>
