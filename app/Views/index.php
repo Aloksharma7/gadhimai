@@ -8,39 +8,23 @@
       class="card-img-top"
       alt="..."
     />
-    <p>Gadhimai Mandir</p>
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>गढीमाई मन्दिर</p>
+      <?php else: ?>
+    <p>Gadhimai Temple</p>
+    <?php endif; ?>
   </div>
   <div class="card temples-card" style="width: 6.5rem">
     <img
-      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
+      src="<?= base_url('assets/image/temples/sarwasati-mata.jpg') ?>"
       class="card-img-top"
       alt="..."
     />
-    <p>Gadhimai Mandir</p>
-  </div>
-  <div class="card temples-card" style="width: 6.5rem">
-    <img
-      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
-      class="card-img-top"
-      alt="..."
-    />
-    <p>Gadhimai Mandir</p>
-  </div>
-  <div class="card temples-card" style="width: 6.5rem">
-    <img
-      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
-      class="card-img-top"
-      alt="..."
-    />
-    <p>Gadhimai Mandir</p>
-  </div>
-  <div class="card temples-card" style="width: 6.5rem">
-    <img
-      src="<?= base_url('assets/image/temples/gadhimai-mandir.jpg') ?>"
-      class="card-img-top"
-      alt="..."
-    />
-    <p>Gadhimai Mandir</p>
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>सर्वसती मन्दिर</p>
+      <?php else: ?>
+    <p>Sarwasati Temple</p>
+    <?php endif; ?>
   </div>
   <div class="card temples-card" style="width: 6.5rem">
     <img
@@ -48,7 +32,23 @@
       class="card-img-top"
       alt="..."
     />
-    <p>Hanuman Mandir</p>
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>हनुमान मन्दिर</p>
+      <?php else: ?>
+    <p>Hanuman Temple</p>
+    <?php endif; ?>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/kartik-ganesh.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>कार्तिक गणेश मन्दिर</p>
+      <?php else: ?>
+      <p>Kartik Ganesh Temple</p>
+    <?php endif; ?>
   </div>
   <div class="card temples-card" style="width: 6.5rem">
     <img
@@ -56,7 +56,23 @@
       class="card-img-top"
       alt="..."
     />
-    <p>Jorlahi Mata Mandir</p>
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>जोरलाही माता मन्दिर</p>
+      <?php else: ?>
+    <p>Jorlahi Mata Temple</p>
+    <?php endif; ?>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/ganesh-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>गणेश मन्दिर</p>
+      <?php else: ?>
+    <p>Ganesh Temple</p>
+    <?php endif; ?>
   </div>
   <div class="card temples-card" style="width: 6.5rem">
     <img
@@ -64,7 +80,35 @@
       class="card-img-top"
       alt="..."
     />
-    <p>Ramna Kamna Mai Mandir</p>
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>रामना कामना माई मन्दिर</p>
+      <?php else: ?>
+    <p>Ramna Kamna Mai Temple</p>
+    <?php endif; ?>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/shiv-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>शिव मन्दिर</p>
+      <?php else: ?>
+    <p>Shiv Temple</p>
+    <?php endif; ?>
+  </div>
+  <div class="card temples-card" style="width: 6.5rem">
+    <img
+      src="<?= base_url('assets/image/temples/parbati-mandir.jpg') ?>"
+      class="card-img-top"
+      alt="..."
+    />
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>पार्वती मन्दिर</p>
+      <?php else: ?>
+    <p>Parbati Temple</p>
+    <?php endif; ?>
   </div>
   <div class="card temples-card" style="width: 6.5rem">
     <img
@@ -72,15 +116,11 @@
       class="card-img-top"
       alt="..."
     />
-    <p>Sapahi Mai Mandir</p>
-  </div>
-  <div class="card temples-card" style="width: 6.5rem">
-    <img
-      src="<?= base_url('assets/image/temples/hanuman-mandir.jpg') ?>"
-      class="card-img-top"
-      alt="..."
-    />
-    <p>Hanuman Mandir</p>
+    <?php if (session()->get('language') === 'ne'): ?>
+      <p>सापही माई मन्दिर</p>
+      <?php else: ?>
+    <p>Sapahi Mai Temple</p>
+    <?php endif; ?>
   </div>
 </div>
 
@@ -113,7 +153,11 @@
 
 <!-- gadhimai mantar banner  -->
  <section class=" my-5">
-<h2 class="heading text-center">Gadhimai Mul Mantra</h2>
+   <?php if (session()->get('language') === 'ne'): ?>
+    <h2 class="heading text-center">गढीमाई मूल मन्त्र</h2>
+    <?php else: ?>
+      <h2 class="heading text-center">Gadhimai Mul Mantra</h2> 
+<?php endif ?>
 <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block" />
 
  <div class="mantar-banner d-flex justify-content-center">
@@ -124,7 +168,11 @@
  <!-- devotee services  -->
 <Section class="devotee-services container-fluid">
   <br>
-<h2 class="heading text-center">Devotee Services</h2>
+  <?php if (session()->get('language') === 'ne'): ?>
+    <h2 class="heading text-center">भक्त सेवा</h2>
+    <?php else: ?>
+      <h2 class="heading text-center">Devotee Services</h2>
+<?php endif ?>
 <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block" />
 
 <div class="container py-5 d-block ">
@@ -181,17 +229,16 @@
                 <img src="/assets/image/right-arrow.svg" class="arrow right-arrow" alt="" />
             </div>
 
-            <h2 class="heading my-2">
-                Development <br />
-                Projects
-            </h2>
-            <p>
-                Some kind of text here that helps to identify the content <br />
-                Some kind of text here that helps to identify the conten <br />Some kind of text here that helps to identify the conten
-            </p>
+            <?php if (session()->get('language') === 'ne'): ?>
+              <h2 class="heading">धार्मिक स्थल र अनुष्ठान</h2>
+              <p> गढीमाई परिसरमा हुने परम्परा तथा धार्मिक अनुष्ठान बोकेका यस्तालहरू </p>
+              <?php else: ?>
+                <h2 class="heading my-2"> Religious places & <br /> Rituals </h2>
+                <p> Rituals and traditions held at Gadhimai premises</br> with religious significance</p>
+            <?php endif ?>
 
             <button class="btn btn-primary">
-                View More
+                <?= lang('General.view_more'); ?>
 
                 <svg id="MDI_arrow-left-thin-circle-outline" data-name="MDI / arrow-left-thin-circle-outline" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                     <g id="Boundary" fill="#FFAF42" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
@@ -209,8 +256,13 @@
             <div class="card development-card" style="width: 18rem; display: <?= ($index < 3) ? 'block' : 'none'; ?>">
                 <img src="<?= $blog['img_url'] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
+                <?php if (session()->get('language') === 'ne'): ?>
+                  <p class="card-text"><?= $blog['post_content_nepali'] ?></p>
+                  <h5 class="card-title"><?= $blog['post_title_nepali'] ?></h5>
+                  <?php else: ?>
                     <p class="card-text"><?= $blog['post_content'] ?></p>
                     <h5 class="card-title"><?= $blog['post_title'] ?></h5>
+                    <?php endif ?>
                 </div>
             </div>
         <?php endforeach; ?>
@@ -220,7 +272,11 @@
 
 <!-- photo gallery -->
 <section class="photo-gallery">
-  <h2 class="heading">Photo Gallery</h2>
+  <?php if (session()->get('language') === 'ne'): ?>
+    <h2 class="heading text-center">फोटो ग्यालेरी</h2>
+    <?php else: ?>
+      <h2 class="heading">Photo Gallery</h2>
+<?php endif ?>
   <img src="/assets/image/divider.svg" class="divider" />
   <!-- Gallery -->
   <div class="container-fluid project-img">
@@ -282,7 +338,7 @@
   <!-- Gallery -->
   <a href= " <?= base_url("gallery") ?> ">
   <button class="btn btn-primary" style="margin-top: 7px">
-     View More 
+     <?= lang('General.view_more'); ?> 
     <svg
       id="MDI_arrow-left-thin-circle-outline"
       data-name="MDI / arrow-left-thin-circle-outline"
@@ -315,22 +371,35 @@
 
 <!-- key peoples  -->
 <section class="development-partner development-project container-fluid">
-  <h2 class="heading">Government of Madesh Pradesh - Endowment Department</h2>
+  <?php if (session()->get('language') === 'ne'): ?>
+    <h2 class="heading text-center">गढीमाई मन्दिर सञ्चालन तथा व्यवस्थापन निकायहरू</h2>
+    <?php else: ?>
+      <h2 class="heading">Gadhimai Temple Operational & Management Bodies</h2>
+<?php endif ?>
   <img src="/assets/image/divider.svg" class="divider" />
   <div class="row card-row d-flex justify-content-evenly development-partner">
     <div class="col-md-3 mb-3" style="width: 18rem;" >
       <div class="card h-100">
         <img
-          src="/assets/image/political/Upendra-Yadav-new-1-1024x1024.jpg.bv.webp"
+          src="/assets/image/usables/mela-samiti.jpg"
           class="card-img-top"
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+          <?php if (session()->get('language') === 'ne'): ?>
+          <h5 class="card-title samiti">श्री गढीमाई पञ्चवर्षीय मेला</br> सञ्चालन तथा व्यवस्थापन मूल समिति</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
+          <?php else: ?>
+            <h5 class="card-title samiti">Shree Gadhimai five Year Fair Operation & Manage-ment Main Committee</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          <?php endif ?>
+          <a href="<?= base_url('/management-committee') ?>" class="btn btn-outline-primary mt-1">Read More</a>
         </div>
       </div>
     </div>
@@ -345,11 +414,46 @@
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">Upendra Pd. Yadav</h5>
+          <?php if (session()->get('language') === 'ne'): ?>
+          <h5 class="card-title samiti">उपेन्द्र प्रसाद यादव</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
+          <?php else: ?> 
+          <h5 class="card-title samiti">Upendra Prasad Yadav</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <?php endif ?>
+          <a href="<?= base_url('/management-committee') ?>" class="btn btn-outline-primary mt-1">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3 " style="width: 18rem;">
+      <div class="card h-100">
+        <img
+          src="/assets/image/gadhimai-mandir.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+        <?php if (session()->get('language') === 'ne'): ?>
+          <h5 class="card-title samiti">श्री गढीमाई मन्दिर सञ्चालन </br>तथा विकास समिति</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <?php else: ?>
+          <h5 class="card-title samiti">Shree Gadhimai Temple Operation & Developme-nt Committee</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <?php endif ?>
+          <a href="<?= base_url('/development-committee') ?>" class="btn btn-outline-primary mt-1">Read More</a>
         </div>
       </div>
     </div>
@@ -357,16 +461,25 @@
     <div class="col-md-3 mb-3" style="width: 18rem;">
       <div class="card h-100">
         <img
-          src="/assets/image/political/Upendra-Yadav-new-1-1024x1024.jpg.bv.webp"
+          src="/assets/image/political/ramchandra-sah.jpg"
           class="card-img-top"
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
+        <?php if (session()->get('language') === 'ne'): ?>
+          <h5 class="card-title samiti">रामचन्द्र साह</h5>
           <p class="card-text">
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
+          <?php else: ?>
+          <h5 class="card-title samiti">Ramchandra Sah</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <?php endif ?>
+          <a href="<?= base_url('/development-committee') ?>" class="btn btn-outline-primary mt-1">Read More</a>
         </div>
       </div>
     </div>
@@ -377,7 +490,11 @@
 
 <!-- Event calendar code -->
 <div class="container-fluid py-5">
-    <h2 class="text-center mb-4 heading">Upcoming Events</h2>
+  <?php if (session()->get('language') === 'ne'): ?>
+    <h2 class="heading text-center">आगामी घटनाक्रम</h2>
+    <?php else: ?>
+      <h2 class="text-center mb-4 heading">Upcoming Events</h2>
+<?php endif ?>
     <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
 
     <div class="row">
@@ -409,7 +526,11 @@
 <!-- Youtube Videos Section -->
 <section class="youtube-video py-5 ">
     <div class="container">
-        <h2 class="text-center mb-4">Watch Our Latest Video</h2>
+      <?php if (session()->get('language') === 'ne'): ?>
+        <h2 class="heading text-center">गढीमाई मूल मन्त्र</h2>
+        <?php else: ?>
+          <h2 class="text-center mb-4">Watch Our Latest Video</h2>
+<?php endif ?>
         <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-5" />
 
         <div class="row justify-content-center">
@@ -432,7 +553,11 @@
 
 <!-- Gadhimai Location Section -->
 <div class="container py-5">
-    <h2 class="text-center mb-4 heading">Gadhimai Temple Location</h2>
+  <?php if (session()->get('language') === 'ne'): ?>
+    <h2 class="heading text-center">गढीमाई मन्दिर स्थान</h2>
+    <?php else: ?>
+      <h2 class="text-center mb-4 heading">Gadhimai Temple Location</h2>
+<?php endif ?>
     <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
 
     <div class="row">

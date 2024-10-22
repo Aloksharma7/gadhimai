@@ -29,5 +29,13 @@ class Home extends BaseController
     {
         return view('contact');
     }
+    public function management_committee()
+    {
+        return view('pages/management_committee');
+    }
+    public function development_committee()
+    {
+        return view('pages/development_committee');
+    }
     
 }

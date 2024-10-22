@@ -217,3 +217,8 @@
     width: 100%;
     aspect-ratio: 16/5;
 }
+
+.samiti{
+    color:#9a031e;
+    word-break: break-all;
+}

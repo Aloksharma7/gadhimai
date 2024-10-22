@@ -8,7 +8,7 @@
 
 <!-- Blog Section -->
 <div class="container py-5">
-  <h2 class="text-center mb-4">Blog</h2>
+  <h2 class="text-center mb-4 heading"><?= lang('General.blog') ?></h2>
   <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-5" />
 
   <!-- Blog List -->
@@ -22,9 +22,16 @@
               <span class="badge text-bg-secondary mb-1"><?= esc($blog['post_category']) ?></span>
               <?php if (session()->get('language') === 'ne'): ?>
               <h5 class="card-title"><?= esc($blog['post_title_nepali']) ?></h5>
+              <p class="card-text">
+                <?php
+                // Show a short snippet (first 100 characters or 20 words)
+                helper('text'); // Load CodeIgniter text helper
+                echo word_limiter(esc($blog['post_content_nepali']), 20); // Adjust number of words as needed
+                ?>
+                ...
+              </p>
               <?php else: ?>
               <h5 class="card-title"><?= esc($blog['post_title']) ?></h5>
-              <?php endif; ?>
               <p class="card-text">
                 <?php
                 // Show a short snippet (first 100 characters or 20 words)
@@ -33,6 +40,7 @@
                 ?>
                 ...
               </p>
+              <?php endif; ?>
               <small class="text-body-secondary ms-1">
                 <?php
                 // Format the date (e.g., January 1, 2024)

@@ -26,6 +26,9 @@ $routes->get('/newsnotice', 'NewsNoticeController::NewsNotices');
 $routes->get('newsnotice/view/(:segment)', 'NewsNoticeController::view/$1');
 $routes->get('language/switch/(:any)', 'LanguageController::switch/$1'); //change language
 
+// pages
+$routes->get('/management-committee', 'Home::management_committee');
+$routes->get('/development-committee', 'Home::development_committee');
 
 
 

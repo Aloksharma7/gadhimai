@@ -10,6 +10,12 @@ body {
     min-height: 100vh;
 }
 
+@font-face {
+    font-family: 'Suryodaya';
+    src: url('<?= base_url("assets/fonts/Suryodaya.ttf"); ?>') format('truetype');
+}
+
+
 /* .header-container { */
 /* Wraps top-menu and main-menu */
 /* } */
@@ -125,6 +131,22 @@ a{
 
 .login{
     color: blue;
+}
+
+.custom-btn{
+    background-color: #9a031e !important;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    outline: none;
+    /* Remove browser default outline */
+    box-shadow: none;
+    color: var(--white);
 }
 
 .btn-primary, .btn-outline-primary {

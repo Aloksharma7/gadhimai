@@ -11,6 +11,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href=" <?= base_url('/assets/css/layout.css') ?>">
     <link rel="stylesheet" href=" <?= base_url('/assets/css/index.css') ?>">
+
+    <!-- font famaily -->
+<?php if (session()->get('language') === 'ne') : ?>
+    <style>  body { font-family: 'Suryodaya', sans-serif;} </style>
+    <?php else: ?>
+        <style>  body { font-family: 'Arial', sans-serif;} </style>
+<?php endif ?>
+
+
     <!-- Include additional CSS files or inline styles from specific pages -->
     <?= $this->renderSection('styles') ?>
     <!-- Editor Template setup script file -->
@@ -39,7 +48,7 @@
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                             </div> |
                             <div class="language-switcher dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown"
+                                <button class="btn custom-btn dropdown-toggle" type="button" id="languageDropdown"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     <?= ucfirst(session()->get('language') ?? 'English'); ?>
                                 </button>
@@ -76,7 +85,7 @@
             </div>
         </div>
         <!-- Main Navigation Menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark main-menu z-1">
+        <nav class="navbar navbar-expand-lg navbar-dark main-menu z-3">
             <div class="container-fluid">
                 <!-- Navbar toggler for mobile devices -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -111,6 +120,19 @@
                                 <?= lang('General.contact_us'); ?>
                             </a></li>
 
+                            <li><div class="language-switcher dropdown d-block d-sm-none d-md-none">
+                                <a class=" dropdown-toggle" type="button" id="languageDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?= ucfirst(session()->get('language') ?? 'English'); ?>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                    <li><a class="dropdown-item" href="<?= base_url('language/switch/en') ?>">English</a></li>
+                                    <li><a class="dropdown-item" href="<?= base_url('language/switch/ne') ?>">Nepali</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
+                            
                         <?php if(session()->get('isLoggedIn')): ?>
                         <!-- admin blog links -->
                         <li class="nav-item dropdown">
@@ -162,6 +184,7 @@
                     </ul>
                 </div>
             </div>
+            
         </nav>
     </Header>
 
