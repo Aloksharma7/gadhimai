@@ -122,6 +122,11 @@ a{
     color: white;
     text-decoration: none;
 }
+
+.login{
+    color: blue;
+}
+
 .btn-primary, .btn-outline-primary {
     background-color: #9a031e !important;
     font-size: 14px;
@@ -206,4 +211,17 @@ a{
 
 .footer .social-icons a:hover {
     color: var(--header-background);
+}
+
+
+@media (max-width: 767px) {
+    .development-card {
+        width: 100%; /* Make cards full width on small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .development-card {
+        width: 30%; /* Keep them side by side on larger screens */
+    }
 }

@@ -24,6 +24,8 @@ $routes->get('/blog', 'BlogController::blogs');
 $routes->get('blog/view/(:segment)', 'BlogController::view/$1');
 $routes->get('/newsnotice', 'NewsNoticeController::NewsNotices');
 $routes->get('newsnotice/view/(:segment)', 'NewsNoticeController::view/$1');
+$routes->get('language/switch/(:any)', 'LanguageController::switch/$1'); //change language
+
 
 
 

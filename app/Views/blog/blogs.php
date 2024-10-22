@@ -20,7 +20,11 @@
             <div class="card-body blogs-body">
               <img src="<?= esc($blog['img_url'])  ?>" alt="<?= esc($blog['slug'])  ?>" class="rounded mb-2" >
               <span class="badge text-bg-secondary mb-1"><?= esc($blog['post_category']) ?></span>
+              <?php if (session()->get('language') === 'ne'): ?>
+              <h5 class="card-title"><?= esc($blog['post_title_nepali']) ?></h5>
+              <?php else: ?>
               <h5 class="card-title"><?= esc($blog['post_title']) ?></h5>
+              <?php endif; ?>
               <p class="card-text">
                 <?php
                 // Show a short snippet (first 100 characters or 20 words)

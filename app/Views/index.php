@@ -111,7 +111,17 @@
     </button>
 </div>
 
+<!-- gadhimai mantar banner  -->
+ <section class=" my-5">
+<h2 class="heading text-center">Gadhimai Mul Mantra</h2>
+<img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block" />
 
+ <div class="mantar-banner d-flex justify-content-center">
+  <img src="assets/image/banner.webp" alt="Gadhimai Mantar Banner">
+ </div>
+ </section>
+
+ <!-- devotee services  -->
 <Section class="devotee-services container-fluid">
   <br>
 <h2 class="heading text-center">Devotee Services</h2>
@@ -162,101 +172,51 @@
 </div>
 </Section>
 
-<div
-  class="development-project container-fluid d-flex justify-content-between my-3"
->
-  <div class="details">
-    <div class="container">
-      <div class="my-2">
-        <img
-          src="/assets/image/left-arrow.svg"
-          class="arrow"
-          style="-webkit-transform: scaleX(-1); transform: scaleX(-1)"
-          alt=""
-        />
-        <img src="/assets/image/right-arrow.svg" class="arrow" alt="" />
-      </div>
+<!-- development projects  -->
+<div class="development-project container-fluid d-flex justify-content-lg-between justify-content-center flex-wrap-reverse my-3">
+    <div class="details">
+        <div class="container">
+            <div class="my-2">
+                <img src="/assets/image/left-arrow.svg" class="arrow left-arrow" style="-webkit-transform: scaleX(-1); transform: scaleX(-1)" alt="" />
+                <img src="/assets/image/right-arrow.svg" class="arrow right-arrow" alt="" />
+            </div>
 
-      <h2 class="heading my-2">
-        Development <br />
-        Projects
-      </h2>
-      <p>
-        Some kind of text here that helps to identify the content <br />
-        Some kind of text here that helps to identify the conten <br />Some kind
-        of text here that helps to identify the conten
-      </p>
+            <h2 class="heading my-2">
+                Development <br />
+                Projects
+            </h2>
+            <p>
+                Some kind of text here that helps to identify the content <br />
+                Some kind of text here that helps to identify the conten <br />Some kind of text here that helps to identify the conten
+            </p>
 
-      <button class="btn btn-primary">
-        View More
+            <button class="btn btn-primary">
+                View More
 
-        <svg
-          id="MDI_arrow-left-thin-circle-outline"
-          data-name="MDI / arrow-left-thin-circle-outline"
-          xmlns="http://www.w3.org/2000/svg"
-          width="22"
-          height="22"
-          viewBox="0 0 22 22"
-        >
-          <g
-            id="Boundary"
-            fill="#FFAF42"
-            stroke="rgba(0,0,0,0)"
-            stroke-width="1"
-            opacity="0"
-          >
-            <rect width="22" height="22" stroke="none" />
-            <rect x="0.5" y="0.5" width="21" height="21" fill="none" />
-          </g>
-          <path
-            id="Path_arrow-left-thin-circle-outline"
-            data-name="Path / arrow-left-thin-circle-outline"
-            d="M18.528,11.167a7.361,7.361,0,1,1-7.361-7.361,7.39,7.39,0,0,1,7.361,7.361m1.806,0a9.167,9.167,0,1,0-9.167,9.167,9.147,9.147,0,0,0,9.167-9.167m-7.755-.917V7.5l3.63,3.667-3.63,3.667v-2.75H6.125V10.25"
-            transform="translate(-0.167 -0.167)"
-            fill="#FFAF42"
-          />
-        </svg>
-      </button>
+                <svg id="MDI_arrow-left-thin-circle-outline" data-name="MDI / arrow-left-thin-circle-outline" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <g id="Boundary" fill="#FFAF42" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
+                        <rect width="22" height="22" stroke="none" />
+                        <rect x="0.5" y="0.5" width="21" height="21" fill="none" />
+                    </g>
+                    <path id="Path_arrow-left-thin-circle-outline" data-name="Path / arrow-left-thin-circle-outline" d="M18.528,11.167a7.361,7.361,0,1,1-7.361-7.361,7.39,7.39,0,0,1,7.361,7.361m1.806,0a9.167,9.167,0,1,0-9.167,9.167,9.147,9.147,0,0,0,9.167-9.167m-7.755-.917V7.5l3.63,3.667-3.63,3.667v-2.75H6.125V10.25" transform="translate(-0.167 -0.167)" fill="#FFAF42" />
+                </svg>
+            </button>
+        </div>
     </div>
-  </div>
 
-  <div class="card card-1" style="width: 18rem">
-    <img src="<?= base_url("/assets/image/god1.png") ?>" class="card-img-top"
-    alt="...">
-    <div class="card-body">
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <h5 class="card-title">Card title</h5>
+    <div class="card-wrapper d-flex gap-3">
+        <?php foreach ($blogs as $index => $blog): ?>
+            <div class="card development-card" style="width: 18rem; display: <?= ($index < 3) ? 'block' : 'none'; ?>">
+                <img src="<?= $blog['img_url'] ?>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text"><?= $blog['post_content'] ?></p>
+                    <h5 class="card-title"><?= $blog['post_title'] ?></h5>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
-  </div>
-
-  <div class="card card-2 d-none d-sm-block" style="width: 18rem">
-    <img src="
-    <?= base_url("/assets/image/god1.png") ?>
-    " class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <h5 class="card-title">Card title</h5>
-    </div>
-  </div>
-
-  <div class="card card-3 d-none d-sm-block" style="width: 18rem">
-    <img src="<?= base_url("/assets/image/god1.png") ?>" class="card-img-top"
-    alt="...">
-    <div class="card-body">
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
-      <h5 class="card-title">Card title</h5>
-    </div>
-  </div>
 </div>
+
 
 <!-- photo gallery -->
 <section class="photo-gallery">
@@ -353,6 +313,7 @@
   </a>
 </section>
 
+<!-- key peoples  -->
 <section class="development-partner development-project container-fluid">
   <h2 class="heading">Government of Madesh Pradesh - Endowment Department</h2>
   <img src="/assets/image/divider.svg" class="divider" />
@@ -412,29 +373,10 @@
   </div>
 </section>
 
-<!-- Youtube Videos Section -->
-<section class="youtube-video py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Watch Our Latest Video</h2>
-        <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-5" />
-
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card h-100 shadow">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center">
-                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/ERm7Gk2Qzc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
 <!-- Event calendar code -->
-<div class="container-fluid py-5 development-project">
+<div class="container-fluid py-5">
     <h2 class="text-center mb-4 heading">Upcoming Events</h2>
     <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-4" />
 
@@ -461,6 +403,29 @@
         <?php endif; ?>
     </div>
 </div>
+
+
+
+<!-- Youtube Videos Section -->
+<section class="youtube-video py-5 ">
+    <div class="container">
+        <h2 class="text-center mb-4">Watch Our Latest Video</h2>
+        <img src="/assets/image/divider.svg" class="divider img-fluid mx-auto d-block mb-5" />
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card h-100 shadow">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center">
+                            <iframe width="100%" height="400" src="https://www.youtube.com/embed/ERm7Gk2Qzc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
 

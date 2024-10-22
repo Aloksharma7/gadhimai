@@ -38,9 +38,18 @@
                                 <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
                             </div> |
-                            <div class="language-switcher">
-                                English
-                            </div> |
+                            <div class="language-switcher dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="languageDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <?= ucfirst(session()->get('language') ?? 'English'); ?>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                    <li><a class="dropdown-item" href="<?= base_url('language/switch/en') ?>">English</a></li>
+                                    <li><a class="dropdown-item" href="<?= base_url('language/switch/ne') ?>">Nepali</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            |
                             <div class="public-dashboard">
                                 <i class="fas fa-tachometer-alt"></i> <a href="/"
                                     style="color: #fff; text-decoration: none;">Public Dashboard</a>
@@ -77,14 +86,33 @@
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse ps-2" id="navbarResponsive">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
                         <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="/newsnotice">News / Notice</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="/">
+                                <?= lang('General.home'); ?>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/history">
+                                <?= lang('General.history'); ?>
+                            </a></li>
+                            <li class="nav-item"><a class="nav-link" href="/newsnotice">
+                                    <?= lang('General.news_notice'); ?>
+                                </a></li>
+                                <li class="nav-item"><a class="nav-link" href="/blog">
+                                        <?= lang('General.blog'); ?>
+                                    </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/gallery">
+                                <?= lang('General.gallery'); ?>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact">
+                                <?= lang('General.contact_us'); ?>
+                            </a></li>
+
                         <?php if(session()->get('isLoggedIn')): ?>
-                            <!-- admin blog links -->
+                        <!-- admin blog links -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -103,9 +131,10 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="/admin/newsnotice">View All News/Notices</a></li>
-                                <li><a class="dropdown-item" href="/admin/newsnotice/create">Create New News/Notice</a></li>
+                                <li><a class="dropdown-item" href="/admin/newsnotice/create">Create New News/Notice</a>
+                                </li>
                             </ul>
-                        </li>        
+                        </li>
                         <!-- event links                 -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -116,7 +145,7 @@
                                 <li><a class="dropdown-item" href="/admin/events">View Events</a></li>
                                 <li><a class="dropdown-item" href="/admin/events/create">Create Events</a></li>
                             </ul>
-                        </li>                        
+                        </li>
                         <!-- Carousel itmes                 -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -127,7 +156,7 @@
                                 <li><a class="dropdown-item" href="/admin/carousel">View Events</a></li>
                                 <li><a class="dropdown-item" href="/admin/carousel/create">Create Events</a></li>
                             </ul>
-                        </li>                        
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="/admin/logout">Log Out</a></li>
                         <?php endif; ?>
                     </ul>
@@ -181,7 +210,7 @@
             <!-- Copyright -->
             <div class="text-center mt-4">
                 <p>&copy;
-                    <?= date("Y"); ?> Gadhi Mai Temple. All Rights Reserved. | Developed & Designed By <a
+                    <?= date("Y"); ?> Gadhi Mai Temple. All Rights Reserved. | Developed By <a
                         href="https://www.techchampsoftware.com.np" target="_blank"> Tech Champ Software</a>
                 </p>
             </div>
@@ -190,6 +219,52 @@
 
     <!-- JS, Popper.js, and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+const cards = document.querySelectorAll('.card-wrapper .card');
+let currentStartIndex = 0;
+
+// Function to get the number of visible cards based on screen size
+function getVisibleCount() {
+    return window.innerWidth < 768 ? 1 : 3; // 1 card for small screens, 3 for larger screens
+}
+
+// Function to update visible cards
+function updateVisibleCards() {
+    const visibleCount = getVisibleCount();
+    const totalCards = cards.length;
+
+    // Hide all cards initially
+    cards.forEach((card) => {
+        card.style.display = 'none';
+    });
+
+    // Show the cards based on the current start index
+    for (let i = 0; i < visibleCount; i++) {
+        const cardIndex = (currentStartIndex + i) % totalCards;
+        cards[cardIndex].style.display = 'block'; // Show card
+    }
+}
+
+// Handle right arrow click (move to the next card set)
+document.querySelector('.right-arrow').addEventListener('click', () => {
+    currentStartIndex = (currentStartIndex + 1) % cards.length; // Move to the next card set
+    updateVisibleCards();
+});
+
+// Handle left arrow click (move to the previous card set)
+document.querySelector('.left-arrow').addEventListener('click', () => {
+    currentStartIndex = (currentStartIndex - 1 + cards.length) % cards.length; // Move to the previous card set
+    updateVisibleCards();
+});
+
+// Initialize visible cards
+updateVisibleCards();
+
+// Update cards when window is resized
+window.addEventListener('resize', updateVisibleCards);
+
+</script>
+
 </body>
 
 </html>

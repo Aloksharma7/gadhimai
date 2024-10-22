@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\PostModel;
 use CodeIgniter\Controller;
 
-class BlogController extends Controller
+class BlogController extends BaseController
 {
     public function blogs()
     {

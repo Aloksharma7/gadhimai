@@ -45,7 +45,7 @@
 
                     <!-- Link to login page -->
                     <div class="mt-3 text-center">
-                        <p>Already have an account? <a href="/admin/login">Login here</a></p>
+                        <p>Already have an account? <a href="/admin/login" class="login">Login here</a></p>
                     </div>
                 </div>
             </div>

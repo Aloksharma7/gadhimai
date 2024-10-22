@@ -136,10 +136,10 @@
 }
 
 .small-card:first-child {
-    margin-left: 0.5rem; /* Additional space for the first card */
+    padding-left: 0.5rem !important; /* Additional space for the first card */
   }
 .small-card:last-child {
-    margin-right: 0.5rem; /* Additional space for the first card */
+    padding-right: 0.5rem !important; /* Additional space for the first card */
   }
 
 .small-card::-webkit-scrollbar {
@@ -209,4 +209,11 @@
 .carousel-item>img{
     aspect-ratio: 16/5;
     object-fit: cover;
+}
+
+
+/* banner  */
+.mantar-banner>img{
+    width: 100%;
+    aspect-ratio: 16/5;
 }

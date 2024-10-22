@@ -39,8 +39,8 @@
                     </form>
 
                     <!-- Link to login page -->
-                    <div class="mt-3 text-center">
-                        <p>Don't have account ?  <a href="/admin/register">Register here</a></p>
+                    <div class="mt-3 text-center ">
+                        <p>Don't have account ?  <a href="/admin/register" class="login">Register here</a></p>
                     </div>
                 </div>
             </div>

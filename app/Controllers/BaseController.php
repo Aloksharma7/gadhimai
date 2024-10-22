@@ -52,7 +52,10 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
+        // Check if language is set in the session
+        $language = session()->get('language') ?? 'en'; // Default to 'en' if no session is set
+        // Set the locale in CodeIgniter
+        service('request')->setLocale($language);
         // E.g.: $this->session = \Config\Services::session();
     }
 }

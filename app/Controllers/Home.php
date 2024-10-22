@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\EventModel;
 use App\Models\CarouselModel;
+use App\Models\PostModel;
 
 class Home extends BaseController
 {
@@ -12,6 +13,8 @@ class Home extends BaseController
         $data['events'] = $eventModel->orderBy('event_date', 'DESC')->findAll(4); // Get the latest 4 events
         $carouselModel = new CarouselModel();
         $data['carouselItems'] = $carouselModel->findAll();
+        $postModel = new PostModel();
+        $data['blogs'] = $postModel->findAll();
         return view('index', $data); // Load your home vie
     }
     public function history()

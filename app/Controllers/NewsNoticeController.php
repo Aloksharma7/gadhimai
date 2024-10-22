@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\NewsNoticeModel;
 use CodeIgniter\Controller;
 
-class NewsNoticeController extends Controller
+class NewsNoticeController extends BaseController
 {
     public function NewsNotices()
     {
