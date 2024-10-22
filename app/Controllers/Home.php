@@ -14,7 +14,7 @@ class Home extends BaseController
         $carouselModel = new CarouselModel();
         $data['carouselItems'] = $carouselModel->findAll();
         $postModel = new PostModel();
-        $data['blogs'] = $postModel->findAll();
+        $data['blogs'] = $postModel->where('post_category', 'ritual')->findAll();
         return view('index', $data); // Load your home vie
     }
     public function history()

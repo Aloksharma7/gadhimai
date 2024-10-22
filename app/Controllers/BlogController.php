@@ -76,8 +76,8 @@ class BlogController extends BaseController
         $img = $this->request->getFile('img_url');
         if ($img->isValid() && !$img->hasMoved()) {
             $imageName = $img->getRandomName();
-            $img->move(ROOTPATH . 'public/uploads', $imageName);
-            $img_url = base_url('uploads/' . $imageName);
+            $img->move(ROOTPATH . 'public/uploads/blog', $imageName);
+            $img_url = base_url('uploads/blog/' . $imageName);
         } else {
             $img_url = '';
         }
@@ -144,8 +144,8 @@ class BlogController extends BaseController
         $img = $this->request->getFile('img_url');
         if ($img->isValid() && !$img->hasMoved()) {
             $imageName = $img->getRandomName();
-            $img->move(ROOTPATH . 'public/uploads', $imageName);
-            $img_url = base_url('uploads/' . $imageName); // New image URL
+            $img->move(ROOTPATH . 'public/uploads/blog', $imageName);
+            $img_url = base_url('uploads/blog/' . $imageName); // New image URL
         }
     
         // Retrieve the post date from the form
@@ -171,7 +171,23 @@ class BlogController extends BaseController
     public function delete($id)
     {
         $postModel = new PostModel();
-        $postModel->delete($id);
+    
+        // Find the post to get the current image URL
+        $post = $postModel->find($id);
+        if ($post) {
+            // Get the image URL and extract the file path
+            $imagePath = ROOTPATH . 'public/uploads/blog/' . basename($post['img_url']);
+            
+            // Delete the image file if it exists
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+    
+            // Delete the post from the database
+            $postModel->delete($id);
+        }
+    
         return redirect()->to('admin/blog');
     }
+    
 }

@@ -159,7 +159,23 @@ class NewsNoticeController extends BaseController
     public function delete($id)
     {
         $newsNoticeModel = new NewsNoticeModel();
-        $newsNoticeModel->delete($id);
+    
+        // Find the news notice to get the current image URL
+        $newsNotice = $newsNoticeModel->find($id);
+        if ($newsNotice) {
+            // Get the image URL and extract the file path
+            $imagePath = ROOTPATH . 'public/uploads/newsnotice/' . basename($newsNotice['img_url']);
+            
+            // Delete the image file if it exists
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+    
+            // Delete the news notice from the database
+            $newsNoticeModel->delete($id);
+        }
+    
         return redirect()->to('admin/newsnotice');
     }
+    
 }
